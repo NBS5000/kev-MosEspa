@@ -4,8 +4,8 @@ const { User } = require('../../models/User');
 router.post('/', async (req, res) => {
   try {
     // check if the email exist before creating a new one
-
-      // creates a new user in the database
+    
+    // creates a new user in the database using the req.body field
     const userData = await User.create(req.body);
     // uses the same id as the user for the session id
     req.session.user_id = userData.id;

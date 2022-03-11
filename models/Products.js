@@ -53,14 +53,11 @@ Product.init(
       
       },
 
-    image_id: {
-        type: DataTypes.INTEGER,
-        references: {
-          model: 'category',
-          key: 'id'
-        }
-        
-      }
+      image_name: {
+        type: DataTypes.STRING,
+        allowNull: true
+      },
+    
   },
   {
     sequelize,

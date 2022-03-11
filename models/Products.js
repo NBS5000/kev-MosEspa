@@ -52,12 +52,6 @@ Product.init(
         }
       
       },
-
-      image_name: {
-        type: DataTypes.STRING,
-        allowNull: true
-      },
-    
   },
   {
     sequelize,

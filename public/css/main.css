@@ -101,8 +101,79 @@ a{
     color: black;
 }
 
+#background-video {
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -2;
+}
+#mask{
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+    background-color:rgba(255,255,255,0.3);
+}
+.itemBox{
+    height:202px;
+    width: 202px;
+    border: 1px solid red;
+    border-radius: 50%;
+    
+    /* position: relative;
+    animation: itemMove 15s;
+    animation-iteration-count: 99; */
+} 
+.circle { 
+    display: inline-block; 
+    position: relative; 
+    width: 200px; 
+    height: 200px; 
+    overflow: hidden; 
+    border-radius: 50%; 
+} 
+.circle img { 
+    width: auto;
+    height: 100%; 
+    margin-left: -50px; 
+}
+.itemH4{
+    position: absolute;
+    display: inline-block;
+    bottom: 40px;
+    animation: bwFont 6s;
+    animation-iteration-count: 99;
+    font-size: 120%;
+    width: 202px;
+    text-align: center;
 
+}
+.itemP{
+    position: absolute;
+    display: inline-block;
+    bottom: 10px;
+    animation: bwFont 6s;
+    animation-iteration-count: 99;
+    width: 202px;
+    text-align: center;
+}
 
+#displayList{
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
 
 
 
@@ -123,6 +194,27 @@ Glow
     60% {border: 1px solid darkblue;}
     /* 90% {border: 1px solid purple;} */
     100% {border: 1px solid darkred;}
+}
 
+@keyframes bwFont{
+    0% {color:black;text-shadow: 0 0 1px white;}
+    25% {color:white;text-shadow: 0 0 1px black}
+    50% {color:black;text-shadow: 0 0 1px white;}
+    100% {color:white;text-shadow: 0 0 1px black}
+}
 
+@keyframes itemMove{
+    0% {right:-20%;}
+    8% {right:0;}
+    16% {right:10%;}
+    24% {right:20%;}
+    32% {right:30%;}
+    40% {right:40%;}
+    48% {right:50%;}
+    56% {right:60%;}
+    64% {right:70%;}
+    72% {right:80%;}
+    80% {right:90%;}
+    88% {right:100%;}
+    100% {right:120%;}
 }

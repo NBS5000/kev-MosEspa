@@ -12,9 +12,17 @@ SELECT DATABASE();
 
 
 -- Creates the table "produce" within inventory_db --
-CREATE TABLE product(
-  -- Creates a numeric column called "id" which cannot contain null --
+
+CREATE TABLE item(
   id INT NOT NULL,
-  -- Makes a string column called "name" which cannot contain null --
-  name VARCHAR(30) NOT NULL
+  item_name VARCHAR(30) NOT NULL,
+  category_name VARCHAR(100) NOT NULL,
+  price INT NOT NULL,
+  in_stock BOOLEAN
+  );
+
+CREATE TABLE categories(
+  id INT NOT NULL,
+  category_name VARCHAR(30) NOT NULL
 );
+

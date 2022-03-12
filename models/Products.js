@@ -44,11 +44,9 @@ Product.init(
       }
       
     },
-    Description_id: {
+    Description_name: {
         type: DataTypes.STRING,
-        references: {
-          model: 'description',
-          key: 'id'
+      allowNull: false
         }
       
       },

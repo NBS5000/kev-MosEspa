@@ -10,11 +10,11 @@ router.get("/", async (req, res) => {
       include: [
         {
           model: User,
-          attributes: ["userName"],
+          attributes: ["name"],
         },
       ],
     });
-    const product = projectData.map((product) => product.get({ plain: true }));
+    const product = productData.map((product) => product.get({ plain: true }));
     res.render("homepage", {
       product,
     });

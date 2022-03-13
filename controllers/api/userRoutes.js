@@ -1,12 +1,19 @@
 const router = require('express').Router();
-const { User } = require('../../models/User');
+const { User } = require('../../models')
 
 router.post('/', async (req, res) => {
   try {
     // check if the email exist before creating a new one
     
     // creates a new user in the database using the req.body field
+
     const userData = await User.create(req.body);
+    // const userData = await User.create({
+    //   username: req.body.username,
+    //   email: req.body.email,
+    //   password: req.body.password,
+    // })
+    console.log(userData)
     // uses the same id as the user for the session id
     req.session.user_id = userData.id;
     //simple login boolean
@@ -18,9 +25,10 @@ router.post('/', async (req, res) => {
   }
 });
 
+
 router.post('/login', async (req, res) => {
   try {
-      
+    // res.render('login');
     const userData = await User.findOne({ where: { email: req.body.email } });
 
     if (!userData) {

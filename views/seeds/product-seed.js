@@ -2,106 +2,113 @@ const { Product } = require('../models');
 
 const productData = [
   {
-    product_name: 'Plain T-Shirt',
+    product_name: 'Girls Easter themed T-Shirt',
     price: 14.99,
     stock: 14,
     category_id: 1,
-    Description_name: '',
+    Description_name: "Girl's Star Wars Stormtroopers Are Ready To Hunt Eggs On Easter T-Shirt",
   },
   {
-    product_name: 'Running Sneakers',
-    price: 90.0,
+    product_name: "Women's Tank top",
+    price: 29.99,
     stock: 25,
-    category_id: 5,
-    Description_name: '',
+    category_id: 1,
+    Description_name: "Women's Star Wars Cute Cartoon R2-D2 Racerback Tank Top",
   },
   {
-    product_name: 'Branded Baseball Hat',
+    product_name: "Men's Tank Top",
     price: 22.99,
     stock: 12,
-    category_id: 4,
-    Description_name: '',
+    category_id: 1,
+    Description_name: "Men's Star Wars Stormtrooper Starry Night Tank Top",
   },
   {
-    product_name: 'Top 40 Music Compilation Vinyl Record',
+    product_name: "Boy's T-Shirt",
     price: 12.99,
     stock: 50,
-    category_id: 3,
-    Description_name: '',
+    category_id: 1,
+    Description_name: "Boys' Star Wars graphic tee features cartoon images of an array of characters",
   },
   {
-    product_name: 'Cargo Shorts',
+    product_name: "Men's T-Shirt",
+    price: 29.99,
+    stock: 22,
+    category_id: 1,
+    Description_name: "Millenium Falcon 77 Short Sleeve T-Shirt Dark Grey",
+  },
+
+  {
+    product_name: 'Boba Fett',
+    price: 14.99,
+    stock: 14,
+    category_id: 2,
+    Description_name: 'Star Wars: The Book of Boba Fett tv series poster',
+  },
+  {
+    product_name: 'The Mandalorian',
+    price: 14.99,
+    stock: 25,
+    category_id: 2,
+    Description_name: 'Star Wars: The Mandalorian movie poster',
+  },
+  {
+    product_name: 'The Force Awakens',
+    price: 22.99,
+    stock: 12,
+    category_id: 2,
+    Description_name: 'Star Wars VII: The Force Awakens movie poster',
+    
+  },
+  {
+    product_name: 'The Last Jedi',
+    price: 12.99,
+    stock: 50,
+    category_id: 2,
+    Description_name: 'Star Wars VII: The Last Jedi movie poster',
+  },
+  {
+    product_name: 'Rise of the Skywalker',
     price: 29.99,
     stock: 22,
     category_id: 2,
-    Description_name: '',
+    Description_name: 'Star Wars IX: The Rise of the Skywalker movie poster',
   },
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  {
+    product_name: 'Luke',
+    price: 19.99,
+    stock: 14,
+    category_id: 3,
+    Description_name: 'Funko Star Wars - Luke Skywalker Retro Pop! Vinyl Figure',
+  },
+  {
+    product_name: 'Boba Fett',
+    price: 14.99,
+    stock: 14,
+    category_id: 3,
+    Description_name: 'Star Wars: The Book of Boba Fett tv series poster',
+  },
+  {
+    product_name: 'The Mandalorian',
+    price: 14.99,
+    stock: 25,
+    category_id: 3,
+    Description_name: 'Star Wars: The Mandalorian movie poster',
+  },
+  {
+    product_name: 'The Force Awakens',
+    price: 22.99,
+    stock: 12,
+    category_id: 3,
+    Description_name: 'Star Wars VII: The Force Awakens movie poster',
+    
+  },
+  {
+    product_name: 'The Last Jedi',
+    price: 12.99,
+    stock: 50,
+    category_id: 3,
+    Description_name: 'Star Wars VII: The Last Jedi movie poster',
+  },
   {
     product_name: 'Boba Fett',
     price: 14.99,
@@ -213,3 +220,59 @@ const productData = [
 const seedProducts = () => Product.bulkCreate(productData);
 
 module.exports = seedProducts;
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  

@@ -24,8 +24,9 @@ header{
     width: 100%;
     height: 70px;
     background-color: var(--primaryColor);
-    text-align: center;
+    text-align: left;
     padding: 15px;
+    padding-left: 10%;
 }
 footer{
     color: white;
@@ -80,7 +81,15 @@ a{
     margin-top: 20px;
     transition: 0.7s;
 }
-.logSignBtn:hover{
+.itemBtn{
+    margin-bottom: 50px;
+    transition: 0.7s;
+    width: 49%;
+    border-radius:5px;
+    height: 40px;
+    border: 1px solid lightgray;
+}
+.logSignBtn:hover, .itemBtn:hover{
     border: 1px solid green;
     background-color: var(--primaryColor);;
     color: white;
@@ -88,7 +97,7 @@ a{
 .logSignInput, .logH2{
     margin-bottom: 20px;
 }
-.logSignInput, .logSignBtn{
+.logSignInput, .logSignBtn, .itemBtn{
     min-width: 140px;
 }
 .logSignInput, .logSignBtn{
@@ -100,7 +109,30 @@ a{
 .logLabel{
     color: black;
 }
-
+#buySellBtn{
+    display: flex;
+    width: 100%;
+}
+#news{
+    width:40%;
+    min-width: 150px;
+    height: 200px;
+    border: 2px solid var(--primaryColor);
+    box-shadow: 1px 1px green;
+    border-radius:10px;
+    margin:20px 0;
+    padding: 10px;
+}
+.newsH3{
+    margin-bottom:10px;
+    animation: rwbFont 6s;
+    animation-iteration-count: 99;
+    font-size: 120%;
+}
+.newsH4{
+    margin-bottom:5px;
+    font-style: italic;
+}
 #background-video {
     min-width: 100%;
     min-height: 100%;
@@ -127,12 +159,10 @@ a{
 .itemBox{
     height:202px;
     width: 202px;
-    border: 1px solid red;
+    border: 1px solid green;
     border-radius: 50%;
-    
-    /* position: relative;
-    animation: itemMove 15s;
-    animation-iteration-count: 99; */
+    margin-right: 20px;
+    position: relative;
 } 
 .circle { 
     display: inline-block; 
@@ -149,23 +179,23 @@ a{
 }
 .itemH4{
     position: absolute;
-    display: inline-block;
     bottom: 40px;
     animation: bwFont 6s;
     animation-iteration-count: 99;
     font-size: 120%;
     width: 202px;
     text-align: center;
+    z-index: 5;
 
 }
 .itemP{
     position: absolute;
-    display: inline-block;
     bottom: 10px;
     animation: bwFont 6s;
     animation-iteration-count: 99;
     width: 202px;
     text-align: center;
+    z-index: 5;
 }
 
 #displayList{
@@ -173,9 +203,20 @@ a{
     width: 100%;
     flex-direction: row;
     flex-wrap: nowrap;
+    overflow-x: auto;
+    white-space: nowrap;
+}
+.scroll::-webkit-scrollbar {
+    background:transparent;
+    height: 8px;
 }
 
-
+.scroll::-webkit-scrollbar-thumb:horizontal {
+    background-color: var(--primaryColor);    
+    border-radius: 10px;  
+    border: 1px solid darkgray; 
+    height: 5px;
+}
 
 /*************************
 
@@ -198,9 +239,15 @@ Glow
 
 @keyframes bwFont{
     0% {color:black;text-shadow: 0 0 1px white;}
-    25% {color:white;text-shadow: 0 0 1px black}
+    25% {color:white;text-shadow: 0 0 1px black;}
     50% {color:black;text-shadow: 0 0 1px white;}
-    100% {color:white;text-shadow: 0 0 1px black}
+    100% {color:white;text-shadow: 0 0 1px black;}
+}
+@keyframes rwbFont{
+    0% {color:red;}
+    15% {color:white;}
+    50% {color:blue;}
+    100% {color:red;}
 }
 
 @keyframes itemMove{

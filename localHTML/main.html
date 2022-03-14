@@ -12,7 +12,7 @@
     <link rel="icon" type="image/x-icon" href="../public/images/favicon.ico">
 </head>
 
-<body>
+<body onload="news()">
     <header>
         <h1>Mos Espa Marketplace</h1>
         <nav>
@@ -37,9 +37,8 @@
 
             <div id="news">
                 <h3 class="newsH3">Latest News</h3>
-                <h4 class="newsH4">Empire cracks down on Jedi artifacts</h4>
-                <p class="newsP">The Galactic Expire has announced further punishment for anyone cuaght in posession of any Jedi artifacts. Those found to have any on their person will be terminated.</p>
-
+                <h4 id="newsH4"></h4>
+                <p id="newsP"></p>
             </div>
             
 
@@ -114,6 +113,7 @@
         <script src="/js/logout.js"></script>
         {{/if}}
         -->
+        <script src="../public/js/news.js"></script>
 
         <script>
             var item = document.getElementById("displayList");

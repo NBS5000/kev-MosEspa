@@ -124,13 +124,13 @@ a{
     padding: 10px;
     text-align: center;
 }
-.newsH3{
+#newsH3{
     margin-bottom:10px;
     animation: rwbFont 6s;
     animation-iteration-count: 99;
     font-size: 120%;
 }
-.newsH4{
+#newsH4{
     margin-bottom:10px;
     font-style: italic;
 }

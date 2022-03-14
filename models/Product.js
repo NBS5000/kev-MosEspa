@@ -50,22 +50,6 @@ Product.init(
         key: "id",
       },
     },
-    // category_id: {
-    //   type: DataTypes.STRING,
-    //   references: {
-    //     model: 'category',
-    //     key: 'id'
-    //   }
-
-    // },
-    //   Description_id: {
-    //       type: DataTypes.STRING,
-    //       references: {
-    //         model: 'description',
-    //         key: 'id'
-    //       }
-
-    //     },
   },
   {
     sequelize,

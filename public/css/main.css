@@ -56,7 +56,7 @@ a{
 .logSignForm{
     width: 100%;
 }
-.loginBox{
+.loginBox, .signupBox{
     width: 400px;
     margin-top:150px;
     animation: glowBox 8s;

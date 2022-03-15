@@ -20,8 +20,12 @@
     margin: auto;
     padding: 20px;
     border: 1px solid #888;
-    width: 80%;
+    width: 50%;
     border-radius: 25px;
+    min-width: 220px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
 }
 /* The Close Button */
 .close {
@@ -52,19 +56,11 @@ label{
     background-color: white;
     box-shadow: 2px 2px 8px;
 }
-.modalBtnC:hover,.conCan:hover{
-    animation: glowBox 4s;
-    animation-iteration-count: 99;
+#listH3{
+    width: 100%;
+    text-align: left;
+    color: black;
 }
-
-.conCan, .goodBad, #assessBtn{
-    margin: 5px 25px;
-    width: 100px;
-    height: 40px;
-    border-radius: 20px;
-    border: solid 1px black;
-    background-color: lightsteelblue;
-    color: white;
-    font-weight: bold;
-    font-size: 120%;
+#container{
+    width: 100%;
 }

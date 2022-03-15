@@ -19,6 +19,7 @@ body{
     /* justify-content: space-between; */
 }
 
+
 header{
     color: white;
     width: 100%;
@@ -201,6 +202,7 @@ a{
     width: 202px;
     text-align: center;
     z-index: 5;
+
 }
 .itemP{
     position: absolute;
@@ -251,5 +253,32 @@ a{
     border-radius: 10px;  
     border: 1px solid darkgray; 
     height: 5px;
+}
+
+/******************************
+******** profile page *********
+******************************/
+
+#profileDetails{
+    margin: 0 auto;
+    margin-top: 5%;
+    /* animation: glowBox 8s;
+    animation-iteration-count: 99;*/
+    height: 200px;
+    width: 80%;
+}
+.profileTag{
+    margin-bottom: 10px;
+    font-size:75%;
+    color: var(--primaryColor);
+}
+.profileOutput{
+    margin-bottom: 50px;
+    font-size:250%;
+}
+.listFromProfile{
+    margin: 0 auto;
+    margin-top: 50px;
+    /* width: 200px; */
 }
 

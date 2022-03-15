@@ -27,7 +27,11 @@ canxBtn.addEventListener("click",function(){
 
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
-    if (event.target == modal) {
+    if (event.target == modal) {    
+        document.getElementById("name").value = "";
+    document.getElementById("price").value = "";
+    document.getElementById("description").value = "";
+    document.getElementById("image_link").value = "";
         modal.style.display = "none";
     }
 }

@@ -14,18 +14,14 @@ modalBtn.addEventListener("click",function(){
     modal.style.display = "block";
 });
 
-// var modalBtnAss = document.getElementById("modalBtnAssess");
-// modalBtnAss.addEventListener("click",function(){
-//     var dateUrl = "./date.html?open=yes";
-//     document.location.href = dateUrl;
-// });
-
 // When the user clicks the "Cancel" button, close the modal and clear fields
 
 var canxBtn = document.getElementById("canx");
 canxBtn.addEventListener("click",function(){
-    // document.getElementById("search").value = "";
-    // document.getElementById("datePicker").value = "";
+    document.getElementById("name").value = "";
+    document.getElementById("price").value = "";
+    document.getElementById("description").value = "";
+    document.getElementById("image_link").value = "";
     modal.style.display = "none";
 });
 

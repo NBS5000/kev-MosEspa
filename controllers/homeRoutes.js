@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const withAuth = require("../utils/auth");
+const Auth = require("../utils/auth");
 const { User, Products } = require("../models");
 // home route needs to fetch the products and display them
 // have access to login and a carts page and a profile/my listing page
@@ -22,6 +22,7 @@ router.get("/", async (req, res) => {
     res.status(400).json(err);
   }
 });
+
 
 // finding a product by its name 
 

@@ -46,6 +46,13 @@ h1{
 a{
     text-decoration: none;
 }
+
+
+
+
+/*****************************
+*****  log in ****************
+******************************/
 #loginSignUp{
     display: flex;
     flex-wrap: wrap;
@@ -56,7 +63,7 @@ a{
 .logSignForm{
     width: 100%;
 }
-.loginBox{
+.loginBox, .signupBox{
     width: 400px;
     margin-top:150px;
     animation: glowBox 8s;
@@ -81,14 +88,6 @@ a{
     margin-top: 20px;
     transition: 0.7s;
 }
-.itemBtn{
-    margin-bottom: 50px;
-    transition: 0.7s;
-    width: 49%;
-    border-radius:5px;
-    height: 40px;
-    border: 1px solid lightgray;
-}
 .logSignBtn:hover, .itemBtn:hover{
     border: 1px solid green;
     background-color: var(--primaryColor);;
@@ -109,10 +108,18 @@ a{
 .logLabel{
     color: black;
 }
+/************************************/
+
+
 #buySellBtn{
     display: flex;
     width: 100%;
 }
+
+
+/**********************
+********* news ********
+**********************/
 #news{
     width:40%;
     min-width: 150px;
@@ -124,16 +131,21 @@ a{
     padding: 10px;
     text-align: center;
 }
-.newsH3{
+#newsH3{
     margin-bottom:10px;
     animation: rwbFont 6s;
     animation-iteration-count: 99;
     font-size: 120%;
 }
-.newsH4{
+#newsH4{
     margin-bottom:10px;
     font-style: italic;
 }
+
+
+/***********************
+******* video ********** 
+***********************/
 #background-video {
     min-width: 100%;
     min-height: 100%;
@@ -157,6 +169,8 @@ a{
     z-index: -1;
     background-color:rgba(255,255,255,0.3);
 }
+
+
 .itemBox{
     height:202px;
     width: 202px;
@@ -187,7 +201,6 @@ a{
     width: 202px;
     text-align: center;
     z-index: 5;
-
 }
 .itemP{
     position: absolute;
@@ -207,6 +220,27 @@ a{
     overflow-x: auto;
     white-space: nowrap;
 }
+
+.itemBtn{
+    margin-bottom: 50px;
+    transition: 0.7s;
+    width: 49%;
+    border-radius:5px;
+    height: 40px;
+    border: 1px solid lightgray;
+}
+#fullItemList{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+.fullItemBox{
+    
+}
+
+/*******************************
+******* scroll bar ************* 
+*******************************/
 .scroll::-webkit-scrollbar {
     background:transparent;
     height: 8px;
@@ -219,50 +253,3 @@ a{
     height: 5px;
 }
 
-/*************************
-
-Glow
-
-**************************/
-
-@keyframes glowBox{
-    /* 0% {box-shadow: 0px 0px 5px darkred;}
-    15% {box-shadow: 0px 0px 10px purple;}
-    40% {box-shadow: 0px 0px 15px darkblue;}
-    70% {box-shadow: 0px 0px 10px purple;}
-    90% {box-shadow: 0px 0px 5px darkred;} */
-    0% {border: 1px solid darkred;}
-    /* 25% {border: 1px solid purple;} */
-    60% {border: 1px solid darkblue;}
-    /* 90% {border: 1px solid purple;} */
-    100% {border: 1px solid darkred;}
-}
-
-@keyframes bwFont{
-    0% {color:black;text-shadow: 0 0 1px white;}
-    25% {color:white;text-shadow: 0 0 1px black;}
-    50% {color:black;text-shadow: 0 0 1px white;}
-    100% {color:white;text-shadow: 0 0 1px black;}
-}
-@keyframes rwbFont{
-    0% {color:red;}
-    15% {color:white;}
-    50% {color:blue;}
-    100% {color:red;}
-}
-
-@keyframes itemMove{
-    0% {right:-20%;}
-    8% {right:0;}
-    16% {right:10%;}
-    24% {right:20%;}
-    32% {right:30%;}
-    40% {right:40%;}
-    48% {right:50%;}
-    56% {right:60%;}
-    64% {right:70%;}
-    72% {right:80%;}
-    80% {right:90%;}
-    88% {right:100%;}
-    100% {right:120%;}
-}

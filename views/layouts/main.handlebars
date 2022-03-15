@@ -5,40 +5,46 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mos Espa</title>
-  <link rel="stylesheet" href="../../public/css/reset.css">
-  <link rel="stylesheet" href="../../public/css/main.css">
-  <link rel="stylesheet" href="../../public/css/var.css">
+  <link rel="stylesheet" href="/css/reset.css">
+  <link rel="stylesheet" href="/css/key.css">
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="stylesheet" href="/css/var.css">
 </head>
 
 <body>
-  <div class="flex-column justify-space-around">
-    <header class="display-flex justify-space-between align-center p-2">
-      <h1>
-        <a href="/">Mos Espa</a>
-      </h1>
-      <nav>
-        <!-- Conditionally render login or logout links -->
-        {{#if logged_in}}
-        <a href="/profile">profile</a> |
-        <button class="no-button" id="logout">logout</button>
-        {{else}}
-        <a href="/login">login</a>
-        {{/if}}
-      </nav>
+
+  <video id="background-video" autoplay loop muted >
+    <source src="/vids/mosEisley16.mp4" type="video/mp4">
+  </video>
+  <div id="mask"></div>
+
+    <header>
+      {{> top}}
+
     </header>
-    <main class="container container-fluid mt-5">
+    <div id="mainContent">
       <!-- Render the sub layout -->
       {{{ body }}}
 
+    </div>    
     <footer>
       
     </footer>
-  </div>
+
 
   <!-- Render script for logged in users only -->
   {{#if logged_in}}
   <script src="/js/logout.js"></script>
   {{/if}}
+  <script src="../public/js/news.js"></script>
+
+  <script>
+      var item = document.getElementById("displayList");
+      window.addEventListener("wheel", function (e) {
+      if (e.deltaY > 0) item.scrollLeft += 80;
+      else item.scrollLeft -= 80;
+      });
+  </script>
 </body>
 
 </html>

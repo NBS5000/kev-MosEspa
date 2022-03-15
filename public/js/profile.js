@@ -23,25 +23,27 @@ const newFormHandler = async (event) => {
 };
 
 const delButtonHandler = async (event) => {
-  if (event.target.hasAttribute('data-id')) {
-    const id = event.target.getAttribute('data-id');
+  if (event.target.hasAttribute('user-id')) {
+    const id = event.target.getAttribute('user-id');
 
-    const response = await fetch(`/api/projects/${id}`, {
+    const response = await fetch(`/api/profile/${id}`, {
       method: 'DELETE',
     });
 
     if (response.ok) {
       document.location.replace('/profile');
     } else {
-      alert('Failed to delete project');
+      alert('Failed to delete product');
     }
   }
 };
 
 document
-  .querySelector('.new-project-form')
+  .querySelector('.new-profile-form')
   .addEventListener('submit', newFormHandler);
 
 document
-  .querySelector('.project-list')
+  .querySelector('.product-list')
   .addEventListener('click', delButtonHandler);
+
+  // access 

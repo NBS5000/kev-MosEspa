@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mos Espa</title>
   <link rel="stylesheet" href="/css/reset.css">
+  <link rel="stylesheet" href="/css/key.css">
   <link rel="stylesheet" href="/css/main.css">
   <link rel="stylesheet" href="/css/var.css">
 </head>
@@ -15,46 +16,31 @@
   <video id="background-video" autoplay loop muted >
     <source src="/vids/mosEisley16.mp4" type="video/mp4">
   </video>
-<div id="mask"></div>
+  <div id="mask"></div>
 
     <header>
-        <h1>Mos Espa Marketplace</h1>
-        <nav>
-            <!-- Conditionally render login or logout links -->
-            <!--
-                {{#if logged_in}}
-                <a href="/profile">Account</a> |
-                <button id="logout">Logout</button>
-                {{else}}
-                <a href="/login">Login</a>
-                {{/if}}
-            -->
-        </nav>
+      {{> top}}
 
     </header>
     <div id="mainContent">
       <!-- Render the sub layout -->
       {{{ body }}}
 
-
-
-
-      
     </div>    
     <footer>
       
     </footer>
 
 
+
   <!-- Render script for logged in users only -->
-  {{!-- {{#if logged_in}}
+  {{#if logged_in}}
   <script src="/js/logout.js"></script>
-  {{/if}} --}}
-  <script src="../public/js/news.js"></script>
+  {{/if}}
+  <script src="/js/news.js"></script>
 
   <script>
       var item = document.getElementById("displayList");
-
       window.addEventListener("wheel", function (e) {
       if (e.deltaY > 0) item.scrollLeft += 80;
       else item.scrollLeft -= 80;

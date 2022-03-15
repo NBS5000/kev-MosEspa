@@ -1,0 +1,12 @@
+<h1>Mos Espa Marketplace</h1>
+<nav>
+    <!-- Conditionally render login or logout links -->
+    
+        {{#if logged_in}}
+        <a href="/profile">Account</a> |
+        <button id="logout">Logout</button>
+        {{else}}
+        <a href="/login">Login</a>
+        {{/if}}
+    
+</nav>

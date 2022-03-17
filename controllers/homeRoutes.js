@@ -15,7 +15,34 @@ router.get("/", async (req, res) => {
   //     ],
   //   });
   //   const product = productData.map((product) => product.get({ plain: true }));
-    res.render("homepage")//, {
+    res.render("homepage",{logged_in:req.session.logged_in})
+    
+    
+    
+    //, {
+      // product,
+    // });
+  } catch (err) {
+    res.status(400).json(err);
+  }
+});
+
+router.get("/profile", async (req, res) => {
+  try {
+  //   const productData = await Products.findAll({
+  //     include: [
+  //       {
+  //         model: User,
+  //         attributes: ["name"],
+  //       },
+  //     ],
+  //   });
+  //   const product = productData.map((product) => product.get({ plain: true }));
+    res.render("profile",{logged_in:req.session.logged_in})
+    
+    
+    
+    //, {
       // product,
     // });
   } catch (err) {
@@ -48,7 +75,7 @@ router.get("/product/:id", async (req, res) => {
 router.get("/login", (req, res) => {
   // If the user is already logged in, redirect the request to another route
   if (req.session.logged_in) {
-    res.redirect("/homepage");
+    res.redirect("/");
     return;
   }
 

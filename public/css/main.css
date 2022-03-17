@@ -25,6 +25,8 @@ header{
     width: 100%;
     height: 70px;
     background-color: var(--primaryColor);
+    background-image: url("/images/bgGreen.png");
+    background-repeat: repeat;
     text-align: left;
     padding: 15px;
     padding-left: 10%;

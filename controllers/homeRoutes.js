@@ -1,6 +1,6 @@
 const router = require("express").Router();
 const Auth = require("../utils/auth");
-const { User, Products } = require("../models");
+const { User, Product } = require("../models");
 // home route needs to fetch the products and display them
 // have access to login and a carts page and a profile/my listing page
 
@@ -29,16 +29,21 @@ router.get("/", async (req, res) => {
 
 router.get("/profile", async (req, res) => {
   try {
-  //   const productData = await Products.findAll({
-  //     include: [
-  //       {
-  //         model: User,
-  //         attributes: ["name"],
-  //       },
-  //     ],
-  //   });
-  //   const product = productData.map((product) => product.get({ plain: true }));
-    res.render("profile",{logged_in:req.session.logged_in})
+    const productData = await Product.findAll({
+      where:
+        {
+          user_id:req.session.user_id
+        },
+      
+    });
+    const product = productData.map((product) => product.get({ plain: true }));
+    console.log(req.session)
+    res.render("profile",{
+      logged_in:req.session.logged_in,
+      product,
+      userName:req.session.userName,
+      userEmail:req.session.userEmail
+    })
     
     
     
@@ -46,6 +51,7 @@ router.get("/profile", async (req, res) => {
       // product,
     // });
   } catch (err) {
+    console.log(err);
     res.status(400).json(err);
   }
 });

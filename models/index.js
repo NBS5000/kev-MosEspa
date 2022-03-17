@@ -2,12 +2,12 @@ const User = require('./User');
 const Product = require('./Product');
 
 User.hasMany(Product, {
-  foreignKey: 'id',
+  foreignKey: 'user_id',
   onDelete: 'CASCADE'
 });
 
 Product.belongsTo(User, {
-  foreignKey: 'id'
+  foreignKey: 'user_id'
 });
 
 module.exports = { User, Product };

@@ -4,7 +4,7 @@ CSS file for variables
 
 :root{
     --primaryColor: darkolivegreen;
-    --secondColor: rgb();
+    --secondColor: white;
     --thirdColor: rgb(255, 255, 255);
     --bx_shadow: 5px 5px 15px grey;
     --tx_shadow: 1px 1px 3px dimgray;

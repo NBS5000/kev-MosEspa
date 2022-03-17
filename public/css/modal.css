@@ -61,6 +61,6 @@ label{
     text-align: left;
     color: black;
 }
-#container{
+#container, #container2{
     width: 100%;
 }

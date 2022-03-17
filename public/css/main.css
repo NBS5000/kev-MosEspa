@@ -301,5 +301,6 @@ a{
     margin-bottom:2px;
 }
 .listInput{
-    margin-bottom:5px;
+    margin-bottom:25px;
+    width: 100%;
 }

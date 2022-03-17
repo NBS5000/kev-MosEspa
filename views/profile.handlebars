@@ -1,9 +1,9 @@
 
 <div id="profileDetails">
     <h5 id="profileName" class="profileTag">NAME:</h5>
-    <p id="profileP" class="profileOutput">Boba Fett</p>
+    <p id="profileP" class="profileOutput" data-value="{{user.id}}">{{user.name}}</p>
     <h5 id="profileEmail" class="profileTag">EMAIL:</h5>
-    <p id="profileP" class="profileOutput">boba@fett@hunter.com</p>
+    <p id="profileP" class="profileOutput">{{user.email}}</p>
 </div>
             
 <button class="itemBtn listFromProfile" id="profileList" type="submit">List Item</button>

@@ -6,13 +6,16 @@ const Auth = require("../../utils/auth");
 router.get("/:id", Auth, async (req, res) => {
   try {
     const productData = await Product.findAll({
+      include:{
+        model: User
+      },
       where: {
         user_id: req.params.id,
       },
     });
     const product = productData.map((product) => product.get({ plain: true }));
     res.render("profile", {
-      product,
+      product
     });
   } catch (err) {
     res.status(400).json(err);

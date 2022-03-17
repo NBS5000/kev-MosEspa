@@ -17,3 +17,14 @@
     {{{itemHorz}}} --}}
     
 {{!-- </div> --}}
+
+
+
+<script src="../public/js/news.js"></script>
+<script>
+    var item = document.getElementById("displayList");
+    window.addEventListener("wheel", function (e) {
+    if (e.deltaY > 0) item.scrollLeft += 80;
+    else item.scrollLeft -= 80;
+    });
+</script>

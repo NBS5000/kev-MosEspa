@@ -35,7 +35,9 @@ footer{
     color: white;
     width: 100%;
     height: 70px;
-    background-color:var(--primaryColor);;
+    background-color:var(--primaryColor);
+    background-image: url("/images/bgGreen.png");
+    background-repeat: repeat;
     bottom: 0;
     position: fixed;
 }
@@ -284,3 +286,20 @@ a{
     /* width: 200px; */
 }
 
+/***************************
+** profile modal list ******
+****************************/
+
+.title{
+    color: var(--primaryColor);
+    text-align: center;
+    font-size:150%;
+    margin-bottom: 15px;
+}
+.listLabel{
+    font-size: 80%;
+    margin-bottom:2px;
+}
+.listInput{
+    margin-bottom:5px;
+}

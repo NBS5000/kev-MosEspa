@@ -1,9 +1,9 @@
 
 <div id="profileDetails">
     <h5 id="profileName" class="profileTag">NAME:</h5>
-    <p id="profileP" class="profileOutput" data-value="{{user.id}}">{{user.name}}</p>
+    <p id="profileP" class="profileOutput">{{userName}}</p>
     <h5 id="profileEmail" class="profileTag">EMAIL:</h5>
-    <p id="profileP" class="profileOutput">{{user.email}}</p>
+    <p id="profileP" class="profileOutput">{{userEmail}}</p>
 </div>
             
 <button class="itemBtn listFromProfile" id="profileList" type="submit">List Item</button>
@@ -16,14 +16,14 @@
         <div id = "container">
             <form id = "form">
             <h2 class="title">Create your new Listing</h2>
-            <label for="name" class ="name">Item Name:</label><br>
-            <input type="text" id="name" name="name" placeholder="Item Name" ><br>
-            <label for="price" class="price">Item Price:</label><br>
-            <input type="text" id="price" name="price" placeholder="Sell Price"><br>
-            <label for="description" class ="description">Description:</label><br>
-            <input type="text" id="description" name="description" placeholder="Description"><br>
-            <label for="image_link" class ="image_link">Image URL:</label><br>
-            <input type="text" id="image_link" name="image_link" placeholder="Image URL"><br>
+            <label for="name" class ="name listLabel">Item Name:</label>
+            <input type="text" id="name" name="name" class="listInput" placeholder="Item Name" >
+            <label for="price" class="price listLabel">Item Price:</label>
+            <input type="text" id="price" name="price" class="listInput" placeholder="Sell Price">
+            <label for="description" class ="description listLabel">Description:</label>
+            <input type="text" id="description" name="description" class="listInput" placeholder="Description">
+            <label for="image_link" class ="image_link listLabel">Image URL:</label>
+            <input type="text" id="image_link" name="image_link" class="listInput" placeholder="Image URL">
     <!-- maybe have a box here to show the user id of the person who is adding the item -->
 
             </form>

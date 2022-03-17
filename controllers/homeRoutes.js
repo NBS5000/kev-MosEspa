@@ -26,13 +26,13 @@ router.get("/", async (req, res) => {
 
 // finding a product by its name 
 
-router.get("/product/:name", async (req, res) => {
+router.get("/product/:id", async (req, res) => {
   try {
-    const productData = await Product.findByPk(req.params.name, {
+    const productData = await Product.findByPk(req.params.id, {
       include: [
         {
           model: User,
-          attributes: ["userName"],
+          attributes: ["name"],
         },
       ],
     });

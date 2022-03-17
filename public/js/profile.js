@@ -1,49 +1,81 @@
 const newFormHandler = async (event) => {
   event.preventDefault();
 
-  const name = document.querySelector('#project-name').value.trim();
-  const needed_funding = document.querySelector('#project-funding').value.trim();
-  const description = document.querySelector('#project-desc').value.trim();
+  const name = document.querySelector(".name").value.trim();
+  const price = document.querySelector(".price").value.trim();
+  const description = document.querySelector(".description").value.trim();
+  const image_link = document.querySelector(".image_link").value.trim();
 
-  if (name && needed_funding && description) {
-    const response = await fetch(`/api/projects`, {
-      method: 'POST',
-      body: JSON.stringify({ name, needed_funding, description }),
+  if (name && price && description && image) {
+    const response = await fetch(`/api/product`, {
+      method: "POST",
+      body: JSON.stringify({ name, price, description, image_link }),
       headers: {
-        'Content-Type': 'application/json',
+        "Content-Type": "application/json",
       },
     });
 
     if (response.ok) {
-      document.location.replace('/profile');
+      document.location.replace("api/profile");
     } else {
-      alert('Failed to create project');
+      alert("Failed to create product");
     }
   }
 };
 
 const delButtonHandler = async (event) => {
-  if (event.target.hasAttribute('user-id')) {
-    const id = event.target.getAttribute('user-id');
+  if (event.target.hasAttribute("data-id")) {
+    const id = event.target.getAttribute("data-id");
 
     const response = await fetch(`/api/profile/${id}`, {
-      method: 'DELETE',
+      method: "DELETE",
     });
 
     if (response.ok) {
-      document.location.replace('/profile');
+      document.location.replace("api/profile");
     } else {
-      alert('Failed to delete product');
+      alert("Failed to delete product");
     }
   }
 };
 
-document
-  .querySelector('.new-profile-form')
-  .addEventListener('submit', newFormHandler);
+const updateFormHandler = async (event) => {
+  event.preventDefault();
 
-document
-  .querySelector('.product-list')
-  .addEventListener('click', delButtonHandler);
+  const name = document.querySelector(".name").value.trim();
+  const price = document.querySelector(".price").value.trim();
+  const description = document.querySelector(".description").value.trim();
+  const image_link = document.querySelector(".image_link").value.trim();
 
-  // access 
+  if (name && price && description && image_link) {
+    if (event.target.hasAttribute("data-id")) {
+      const id = event.target.getAttribute("data-id");
+
+      const response = await fetch(`/api/profile/${id}`, {
+        method: "PUT",
+        body: JSON.stringify({ name, price, description, image_link }),
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
+
+      if (response.ok) {
+        document.location.replace("api/profile");
+      } else {
+        alert("Failed to delete product");
+      }
+    }
+  }
+};
+
+const returnToHome = async (event) => {
+  event.preventDefault();
+  document.location.replace("/");
+};
+
+document.querySelector(".addNewItem").addEventListener("click", newFormHandler);
+document.querySelector(".update").addEventListener("click", updateFormHandler);
+document.querySelector(".delete").addEventListener("click", delButtonHandler);
+document.querySelector(".returnToHome").addEventListener("click", returnToHome);
+
+// delete button, update button, add item button, return to homepage Button,

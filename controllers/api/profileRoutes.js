@@ -6,10 +6,9 @@ const Auth = require("../../utils/auth");
 router.get("/:id", Auth, async (req, res) => {
   try {
     const productData = await Product.findAll({
-      where:  
-        {
-          id: req.params.id
-        },
+      where: {
+        user_id: req.params.id,
+      },
     });
     const product = productData.map((product) => product.get({ plain: true }));
     res.render("profile", {
@@ -38,12 +37,11 @@ router.delete("/:id", Auth, async (req, res) => {
     const productData = await Product.destroy({
       where: {
         id: req.params.id,
-        user_id: req.session.user_id,
       },
     });
 
     if (!productData) {
-      res.status(404).json({ message: "No project found with this id!" });
+      res.status(404).json({ message: "No product found with this id!" });
       return;
     }
 
@@ -55,11 +53,17 @@ router.delete("/:id", Auth, async (req, res) => {
 
 router.put("/:id", Auth, async (req, res) => {
   try {
-    const updateProduct = await Product.update(req.body, {
-      where: {
-        id: req.params.id,
+    const updateProduct = await Product.update(
+      {
+        ...req.body,
+        user_id: req.session.user_id,
       },
-    });
+      {
+        where: {
+          user_id: req.params.id,
+        },
+      }
+    );
 
     res.status(200).json(updateProduct);
   } catch (err) {

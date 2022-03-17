@@ -23,7 +23,7 @@ THEN it is no longer available to buy
 
 ## Description
 ​
-This Ecommerce website was created to simulate the marketplace in Mos Espa, a spaceport settlement located on the desert world of Tatooine in the fictional Star Wars universe. Users are able to sign up with an account and sell or purchase items. They are able to manage their own account by adding new items or deleting items that they have uploaded. 
+This E-commerce website was created to simulate the marketplace in Mos Espa, a spaceport settlement located on the desert world of Tatooine in the fictional Star Wars universe. Users are able to sign up with an account and sell or purchase items. They are able to manage their own account by adding new items or deleting items that they have uploaded. 
 ​
 ## Features
 ​

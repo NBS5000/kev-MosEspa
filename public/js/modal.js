@@ -6,13 +6,14 @@ var modal2 = document.getElementById("myModal2");
 // Get the <span> element that closes the modal
 var canx = document.getElementById("canx");
 var canx2 = document.getElementById("canx2");
-// When the user clicks the "Begin"  button, open the modal 
 
+
+// The button that opens the modal
 var modalBtn = document.getElementById("profileList");
 modalBtn.addEventListener("click",function(){
     modal.style.display = "block";
 });
-var modalBtn2 = document.getElementById("profileList2");
+var modalBtn2 = document.querySelector("updateBtn");
 modalBtn2.addEventListener("click",function(){
     modal2.style.display = "block";
 });

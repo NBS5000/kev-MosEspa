@@ -8,38 +8,32 @@
             
 <button class="itemBtn listFromProfile" id="profileList" type="submit">List Item</button>
 
-
+<div id="userProdList">
 {{#each product}}
-	<div class="wrapper">
 		<div class="outer">
-			<div class="content animated fadeInLeft">
-				<span class="bg animated fadeInDown"></span>
-				<h1>{{this.name}}</h1>
-				<p>{{this.description}}</p>
+			<div class="itemContent">
+                <img class="itemListImg" src="{{this.image_link}}" alt="{{this.description}}">
+				<h1 class="itemH1" data-value="{{this.id}}">{{this.name}}</h1>
+                
+				<p class="itemBoxP">{{this.description}}</p>
 				
-				<div class="button">
-					<a href="#">{{this.price}}</a>
-				</div>
-				<!-- need to link product id to delete button -->
-				<div><button type="button" class="delete">Delete</button></div>
-				<!-- need to link product user_id to update button button -->
-				<div><button type="button" data-id="1" class="update">Update</button></div>
+				
+                <h5 class="itemH5"><span class="creditGreen"></span>{{this.price}}</h5>
+				
+				<button type="button" class="itemBtn userItemBtn updateBtn">Update</button>
+				<button type="button" class="itemBtn userItemBtn deleteBtn">Delete</button>
 				
 			</div>
-			<img src="{{this.image_link}}" width="300px" class="animated fadeInRight" alt="{{this.description}}">
 		</div>
-	</div>
 {{/each}}
-
+</div>
 
 
 
 <!-- The Modal -->
 <div id="myModal" class="modal">
-
     <!-- Modal content -->
     <div class="modal-content">
-        <!-- <span class="close">&times;</span> -->
         <div id = "container">
             <form id = "form">
             <h2 class="title">Create your new Listing</h2>
@@ -51,8 +45,6 @@
             <input type="text" id="description" name="description" class="listInput" placeholder="Description">
             <label for="image_link" class ="image_link listLabel">Image URL:</label>
             <input type="text" id="image_link" name="image_link" class="listInput" placeholder="Image URL">
-    <!-- maybe have a box here to show the user id of the person who is adding the item -->
-
             </form>
         </div>
         <br/><br/>
@@ -60,5 +52,32 @@
     </div>
 
 </div>
-        <script src="/js/modal.js"></script>
-        <script src ="/js/profile.js"></script>
+<!-- ....................... -->
+
+<!-- The Modal -->
+<div id="myModal2" class="modal">
+    <!-- Modal content -->
+    <div class="modal-content">
+        <div id = "container2">
+            <form id = "form2">
+            <h2 class="title">Create your new Listing</h2>
+            <label for="name" class ="name listLabel">Item Name:</label>
+            <input type="text" id="name2" name="name" class="listInput" placeholder="Item Name" >
+            <label for="price" class="price listLabel">Item Price:</label>
+            <input type="text" id="price2" name="price" class="listInput" placeholder="Sell Price">
+            <label for="description" class ="description listLabel">Description:</label>
+            <input type="text" id="description2" name="description" class="listInput" placeholder="Description">
+            <label for="image_link" class ="image_link listLabel">Image URL:</label>
+            <input type="text" id="image_link2" name="image_link" class="listInput" placeholder="Image URL">
+            </form>
+        </div>
+        <br/><br/>
+        <button id="confirm2" class="itemBtn">Update</button><button id="canx2" class="itemBtn">Cancel</button>
+    </div>
+</div>
+<!-- ....................... -->
+
+
+
+<script src="/js/modal.js"></script>
+<script src ="/js/profile.js"></script>

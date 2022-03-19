@@ -11,6 +11,7 @@ modalBtn3s.forEach((btn) => {
     const vName = "nameH_" + att;
     const vPrice = "priceH_" + att;
     const vDesc = "descH_" + att;
+    // console.log(att)
     // console.log(document.getElementById(vImg).src)
     document.getElementById("name3").innerHTML =
       document.getElementById(vName).innerHTML;
@@ -20,6 +21,7 @@ modalBtn3s.forEach((btn) => {
       document.getElementById(vDesc).innerHTML;
     document.getElementById("image_link3").src =
       document.getElementById(vImg).src;
+    document.getElementById("addToCart").setAttribute("data-value",att)
 
     modal3.style.display = "block";
   });
@@ -43,7 +45,6 @@ const addToCart = async (event) => {
   if (event.target.hasAttribute("data-value")) {
     const product_id = event.target.getAttribute("data-value");
     console.log(product_id);
-
     const response = await fetch(`/api/addToCart/${product_id}`, {
       method: "POST",
     });

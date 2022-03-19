@@ -17,14 +17,15 @@ router.get("/", Auth, async (req, res) => {
 
 
   router.post('/:id', async (req, res) => {
+    console.log(req.params.id);
     try {
-      const cartData = await User.create({
+      const cartData = await AddToCart.create({
         product_id: req.params.id,
         user_id: req.session.user_id,
       });
       console.log(cartData);
       // sending a response
-      res.status(200).json(userData);
+      res.status(200).json(cartData);
     } catch (err) {
       res.status(400).json(err);
     }

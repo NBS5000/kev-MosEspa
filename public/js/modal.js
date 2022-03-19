@@ -11,23 +11,26 @@ var modalBtn = document.querySelector("#profileList");
 modalBtn.addEventListener("click",function(){
     modal.style.display = "block";
 });
-var modalBtn2 = document.querySelector(".updateBtn");
-modalBtn2.addEventListener("click",async (event) =>{
-    const att = event.target.getAttribute("data-value");
-    const iImg = "img_" + att;
-    const iName = "name_" + att;
-    const iPrice = "price_" + att;
-    const iDesc = "desc_" + att;
-    
-    document.getElementById("name2").value = document.getElementById(iName).innerHTML;
-    // console.log(att, iName, document.getElementById("name_1").innerHTML);
-    // document.getElementById("price").value = document.getElementById(iPrice).innerHTML;
-    document.getElementById("description2").value = document.getElementById(iDesc).innerHTML;
-    document.getElementById("image_link2").value = document.getElementById(iImg).innerHTML;
 
-    modal2.style.display = "block";
+const modalBtn2s = document.querySelectorAll('.updateBtn');
+
+modalBtn2s.forEach(btn => {
+    btn.addEventListener('click', async (event) => {
+        const att = event.target.getAttribute("data-value");
+        const iImg = "img_" + att;
+        const iName = "name_" + att;
+        const iPrice = "price_" + att;
+        const iDesc = "desc_" + att;
+        
+        document.getElementById("name2").value = document.getElementById(iName).innerHTML;
+        console.log(att, iName, document.getElementById("name_1").innerHTML);
+        // document.getElementById("price").value = document.getElementById(iPrice).innerHTML;
+        document.getElementById("description2").value = document.getElementById(iDesc).innerHTML;
+        document.getElementById("image_link2").value = document.getElementById(iImg).innerHTML;
+
+        modal2.style.display = "block";
+    });
 });
-
 // When the user clicks the "Cancel" button, close the modal and clear fields
 
 var canxBtn = document.getElementById("canx");

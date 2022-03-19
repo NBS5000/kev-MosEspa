@@ -17,19 +17,9 @@ router.get("/", async (req, res) => {
   //   });
   //   const product = productData.map((product) => product.get({ plain: true }));
 
-  // const urlPath = window.location.pathname;
-  // if(window.location.pathname == "/"){
-  //   home = false;
-  // }else{
-  //   home = true;
-  // }
+
     res.render("homepage",{logged_in:req.session.logged_in,home:false})
-    
-    
-    
-    //, {
-      // product,
-    // });
+
   } catch (err) {
     res.status(400).json(err);
   }

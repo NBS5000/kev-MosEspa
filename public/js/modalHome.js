@@ -31,31 +31,31 @@ modalBtn3s.forEach(btn => {
 
 var canxBtn3 = document.getElementById("canx3");
 canxBtn3.addEventListener("click", function () {
-  modal3.style.display = "none";
+    modal3.style.display = "none";
 });
 
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function (event) {
-  if (event.target == modal3) {
-    modal3.style.display = "none";
-  }
+    if (event.target == modal3) {
+        modal3.style.display = "none";
+    }
 };
 
 const addToCart = async (event) => {
-  console.log("hi");
-  if (event.target.hasAttribute("data-value")) {
-    const product_id = event.target.getAttribute("data-value");
-    console.log(product_id);
-    const response = await fetch(`/api/addToCart/${product_id}`, {
-      method: "POST",
-    });
+    console.log("hi");
+    if (event.target.hasAttribute("data-value")) {
+        const product_id = event.target.getAttribute("data-value");
+        console.log(product_id);
+        const response = await fetch(`/api/addToCart/${product_id}`, {
+        method: "POST",
+        });
 
-    if (response.ok) {
-      document.location.replace("/");
-    } else {
-      alert("Failed to add product");
+        if (response.ok) {
+        document.location.replace("/");
+        } else {
+        alert("Failed to add product");
+        }
     }
-  }
 };
 
 document.querySelector("#addToCart").addEventListener("click", addToCart);

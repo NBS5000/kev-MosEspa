@@ -18,6 +18,27 @@
     
 {{!-- </div> --}}
 
+<!-- Item Display Modal -->
+<div id="myModal3" class="modal">
+    <!-- Modal content -->
+    <div class="modal-content">
+        <div id = "container3">
+            <form id = "form2">
+                <img src="{{product.image_link}}" id="image_link3"></img>
+                <h2 class="title">Update Listing</h2>
+                <div class="display-item">
+                    <p id="#name3">{{product.name}}</p>
+                    <p id="price3">{{product.price}}</p>
+                    <hr/>
+                    <p id="description3">{{item.description}}</p>
+                </div>
+            </form>
+        </div>
+        <br/><br/>
+        <button id="addToCart" class="itemBtn">Add to Cart</button><button id="canx2" class="itemBtn">Cancel</button>
+    </div>
+</div>
+<!-- ....................... -->
 
 
 <script src="/js/news.js"></script>

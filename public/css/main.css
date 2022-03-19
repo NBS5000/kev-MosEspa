@@ -208,9 +208,6 @@ nav{
     background-color:rgba(255,255,255,0.3);
 }
 
-/***********************
-******** item ********** 
-***********************/
 
 .itemBox{
     height:202px;
@@ -366,7 +363,6 @@ nav{
 	align-items: center;
     border-radius: 5px;
     border: 1px solid var(--primaryColor);
-    margin-right: 20px;
 }
 
 .itemListImg {
@@ -383,7 +379,6 @@ nav{
     justify-content: space-around;
     padding: 5%;
     border-radius: 5px;
-    
 }
 
 .itemH1 {

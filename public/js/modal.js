@@ -1,4 +1,3 @@
-// const {Product} = require("../../models");
 
 // Get the modal
 var modal = document.getElementById("myModal");

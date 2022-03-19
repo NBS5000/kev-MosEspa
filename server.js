@@ -5,7 +5,6 @@ const exphbs = require('express-handlebars');
 const routes = require('./controllers');
 const helpers = require('./utils/helpers')
 
-
 const sequelize = require('./config/connection');
 
 //use connect session to store our session in the sequelize database
@@ -30,7 +29,6 @@ const sess = {
     db: sequelize
   })
 };
-
 
 // uses the session
 app.use(session(sess));

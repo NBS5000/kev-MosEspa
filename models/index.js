@@ -12,14 +12,14 @@ Product.belongsTo(User, {
   onDelete: 'CASCADE'
 });
 
-AddToCart.hasMany(Product, {
+AddToCart.belongsTo(User, {
   foreignKey: 'product_id',
   onDelete: 'CASCADE'
 })
 
-AddToCart.hasMany(User, {
-  foreignKey: 'user_id',
-  onDelete: 'CASCADE'
-})
+// AddToCart.hasMany(User, {
+//   foreignKey: 'user_id',
+//   onDelete: 'CASCADE'
+// })
 
 module.exports = { User, Product, AddToCart };

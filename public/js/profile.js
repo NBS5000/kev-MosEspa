@@ -5,10 +5,7 @@ const newFormHandler = async (event) => {
   const name = document.querySelector("#name").value.trim();
   const price = document.querySelector("#price").value.trim();
   const description = document.querySelector("#description").value.trim();
-  const link = document.querySelector("#image_link").value.trim();
-  const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  const image_link=regex.exec(link)
-  console.log(name)
+  const image_link = document.querySelector("#image_link").value.trim();
 
   if (name && price && description && image_link) {
     const response = await fetch(`/api/profile`, {

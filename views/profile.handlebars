@@ -12,13 +12,12 @@
 {{#each product}}
 		<div class="outer">
 			<div class="itemContent">
-                <img class="itemListImg" src="{{this.image_link}}" alt="{{this.description}}">
-				<h1 class="itemH1" >{{this.name}}</h1>
+                <img class="itemListImg" id="img_{{this.id}}" src="{{this.image_link}}" alt="{{this.description}}">
+				<h1 class="itemH1" id="name_{{this.id}}" >{{this.name}}</h1>
                 
-				<p class="itemBoxP">{{this.description}}</p>
+				<p class="itemBoxP" id="desc_{{this.id}}">{{this.description}}</p>
 				
-				
-                <h5 class="itemH5"><span class="creditGreen"></span>{{this.price}}</h5>
+                <span class="creditGreen"></span><h5 class="itemH5" data-value="price_{{this.id}}">{{this.price}}</h5>
 				
 				<button type="button" data-value="{{this.id}}" class="itemBtn userItemBtn updateBtn">Update</button>
 				<button type="button" class="itemBtn userItemBtn deleteBtn">Delete</button>
@@ -60,7 +59,7 @@
     <div class="modal-content">
         <div id = "container2">
             <form id = "form2">
-            <h2 class="title">Create your new Listing</h2>
+            <h2 class="title">Update Listing</h2>
             <label for="name" class ="name listLabel">Item Name:</label>
             <input type="text" id="name2" name="name" class="listInput" placeholder="Item Name" >
             <label for="price" class="price listLabel">Item Price:</label>

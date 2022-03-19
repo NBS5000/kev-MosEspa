@@ -20,7 +20,7 @@
                 <span class="creditGreen"></span><h5 class="itemH5" data-value="price_{{this.id}}">{{this.price}}</h5>
 				
 				<button type="button" data-value="{{this.id}}" class="itemBtn userItemBtn updateBtn">Update</button>
-				<button type="button" class="itemBtn userItemBtn deleteBtn">Delete</button>
+				<button type="button" data-value="{{this.id}}" class="itemBtn userItemBtn deleteBtn">Delete</button>
 				
 			</div>
 		</div>
@@ -71,7 +71,7 @@
             </form>
         </div>
         <br/><br/>
-        <button id="confirm2" class="itemBtn">Update</button><button id="canx2" class="itemBtn">Cancel</button>
+        <button id="confirm2" data-value="{{this.id}}" class="itemBtn">Update</button><button id="canx2" class="itemBtn">Cancel</button>
     </div>
 </div>
 <!-- ....................... -->

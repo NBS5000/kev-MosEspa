@@ -4,7 +4,7 @@
     <p id="newsP"></p>
 </div>
 
-{{!-- <div id="buySellBtn">
+<div id="buySellBtn">
     {{#if logged_in}}
     <button class="itemBtn" type="submit">List Item</button>
     {{/if}}
@@ -14,10 +14,21 @@
 
 <div id="displayList" class="scroll">
 
-    {{{itemHorz}}} --}}
-    
-{{!-- </div> --}}
-
+{{#each items as |item|}}
+<div class="itemBox" data-value="{{item.id}}">
+    <div class="circle">
+        <img id="img_{{item.id}}" class="circleitemImg" src="{{item.image_link}}" alt="{{item.name}}">
+    </div>
+    <h4 id="name_{{item.id}}" class="itemH4">{{item.name}}</h4>
+    <p id="desc_{{item.id}}" class="hiddenDesc">{{item.description}}</p>
+    </span><P class="itemP" id="price_{{item.id}}" ><span class="creditGreen itemCred"></span>{{item.price}}</P>
+</div>
+{{/each}}
+            const vImg = "img_" + att;
+        const vName = "name_" + att;
+        const vPrice = "price_" + att;
+        const vDesc = "desc_" + att;
+</div> 
 
 
 <script src="/js/news.js"></script>

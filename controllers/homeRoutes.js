@@ -7,18 +7,22 @@ let home;
 
 router.get("/", async (req, res) => {
   try {
-  //   const productData = await Products.findAll({
-  //     include: [
-  //       {
-  //         model: User,
-  //         attributes: ["name"],
-  //       },
-  //     ],
-  //   });
-  //   const product = productData.map((product) => product.get({ plain: true }));
+    const productData = await Product.findAll({
+      include: [
+        {
+          model: User,
+          attributes: ["name"],
+        },
+      ],
+    });
+    const items = productData.map((items) => items.get({ plain: true }));
 
 
-    res.render("homepage",{logged_in:req.session.logged_in,home:false})
+    res.render("homepage",{
+      logged_in:req.session.logged_in,
+      home:false, 
+      items
+    })
 
   } catch (err) {
     res.status(400).json(err);

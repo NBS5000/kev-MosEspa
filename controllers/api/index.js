@@ -5,6 +5,8 @@ const addToCartRoute = require('./addToCartRoute')
 
 router.use('/users', userRoutes);
 router.use('/profile', profileRoutes);
+
 router.use('/addToCart', addToCartRoute);
+
 
 module.exports = router;

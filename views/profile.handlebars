@@ -13,14 +13,14 @@
 		<div class="outer">
 			<div class="itemContent">
                 <img class="itemListImg" src="{{this.image_link}}" alt="{{this.description}}">
-				<h1 class="itemH1" data-value="{{this.id}}">{{this.name}}</h1>
+				<h1 class="itemH1" >{{this.name}}</h1>
                 
 				<p class="itemBoxP">{{this.description}}</p>
 				
 				
                 <h5 class="itemH5"><span class="creditGreen"></span>{{this.price}}</h5>
 				
-				<button type="button" class="itemBtn userItemBtn updateBtn">Update</button>
+				<button type="button" data-value="{{this.id}}" class="itemBtn userItemBtn updateBtn">Update</button>
 				<button type="button" class="itemBtn userItemBtn deleteBtn">Delete</button>
 				
 			</div>

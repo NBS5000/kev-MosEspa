@@ -1,6 +1,7 @@
 const router = require("express").Router();
 const Auth = require("../utils/auth");
 const { User, Product } = require("../models");
+let home;
 // home route needs to fetch the products and display them
 // have access to login and a carts page and a profile/my listing page
 
@@ -15,7 +16,14 @@ router.get("/", async (req, res) => {
   //     ],
   //   });
   //   const product = productData.map((product) => product.get({ plain: true }));
-    res.render("homepage",{logged_in:req.session.logged_in})
+
+  // const urlPath = window.location.pathname;
+  // if(window.location.pathname == "/"){
+  //   home = false;
+  // }else{
+  //   home = true;
+  // }
+    res.render("homepage",{logged_in:req.session.logged_in,home:false})
     
     
     
@@ -42,7 +50,8 @@ router.get("/profile", async (req, res) => {
       logged_in:req.session.logged_in,
       product,
       userName:req.session.userName,
-      userEmail:req.session.userEmail
+      userEmail:req.session.userEmail,
+      home:true
     })
     
     

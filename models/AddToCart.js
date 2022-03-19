@@ -24,6 +24,14 @@ AddToCart.init(
           key: "id",
         }
     },
+    product_name: {
+      type: DataTypes.STRING,
+      allowNull: false,
+  },
+    product_price: {
+      type: DataTypes.DECIMAL,
+      allowNull: false,
+  },
     user_id: {
         type: DataTypes.INTEGER,
         references: {

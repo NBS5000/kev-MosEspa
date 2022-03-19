@@ -11,18 +11,25 @@ modalBtn3s.forEach(btn => {
         const vName = "nameH_" + att;
         const vPrice = "priceH_" + att;
         const vDesc = "descH_" + att;
-        // console.log(document.getElementById(vImg).src)
+        const vSeller = "seller_" + att;
         document.getElementById("name3").innerHTML = document.getElementById(vName).innerHTML;
         document.getElementById("price3").innerHTML = document.getElementById(vPrice).innerHTML;
         document.getElementById("description3").innerHTML = document.getElementById(vDesc).innerHTML;
         document.getElementById("image_link3").src = document.getElementById(vImg).src;
-        document.getElementById("addToCart").setAttribute("data-value",att);
+        document.getElementById("addToCart").setAttribute("data_value",att);
+
+        document.getElementById("itemSeller").textContent = document.getElementById(vSeller).getAttribute("data_value");
+        document.getElementById("sellerP").setAttribute("data_value",document.getElementById(vSeller).getAttribute("data_id"));
+        
+        // console.log(logged_in, uSessId);
+        // const uSessId = req.session.user_id;
+        // const log = req.session.logged_in;
         modal3.style.display = "block";
-        if(att == req.session.user_id){
-            document.getElementById("addToCart").style.display = "none"; 
-        }else{
-            document.getElementById("addToCart").style.display = "block";
-        }
+        // if(logged_in && att == uSessId){
+        //     document.getElementById("addToCart").style.display = "none"; 
+        // }else{
+        //     document.getElementById("addToCart").style.display = "block";
+        // }
     });
 
 
@@ -43,19 +50,19 @@ window.onclick = function (event) {
 
 const addToCart = async (event) => {
     console.log("hi");
-    if (event.target.hasAttribute("data-value")) {
-        const product_id = event.target.getAttribute("data-value");
+    // if (event.target.hasAttribute("data-value")) {
+        const product_id = event.target.getAttribute("data_value");
         console.log(product_id);
         const response = await fetch(`/api/addToCart/${product_id}`, {
-        method: "POST",
+            method: "POST",
         });
 
         if (response.ok) {
         document.location.replace("/");
         } else {
-        alert("Failed to add product");
+        alert("Failed to add product to cart");
         }
-    }
+    // }
 };
 
 document.querySelector("#addToCart").addEventListener("click", addToCart);

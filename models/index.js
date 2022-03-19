@@ -17,9 +17,5 @@ AddToCart.belongsTo(User, {
   onDelete: 'CASCADE'
 })
 
-// AddToCart.hasMany(User, {
-//   foreignKey: 'user_id',
-//   onDelete: 'CASCADE'
-// })
 
 module.exports = { User, Product, AddToCart };

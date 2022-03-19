@@ -18,3 +18,27 @@
     100% {color:red;}
 }
 
+@keyframes crawl {
+    0% {
+    top: -100px;
+    transform: rotateX(20deg)  translateZ(0);
+}
+    99% { 
+    top: -6000px;
+    transform: rotateX(25deg) translateZ(-2500px);
+}
+    100% { 
+    top: 0;
+    transform: rotateX(0) translateZ(0);
+}
+}
+
+@keyframes fromFancy{
+    from {opacity :1;}
+    to {opacity :0;}
+}
+
+@keyframes toPlain{
+    from {opacity :0;}
+    to {opacity :1;}
+}

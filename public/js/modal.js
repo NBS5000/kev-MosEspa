@@ -22,10 +22,9 @@ modalBtn2s.forEach(btn => {
         const iDesc = "desc_" + att;
         
         document.getElementById("name2").value = document.getElementById(iName).innerHTML;
-        console.log(att, iName, document.getElementById("name_1").innerHTML);
-        // document.getElementById("price").value = document.getElementById(iPrice).innerHTML;
+        document.getElementById("price2").value = document.getElementById(iPrice).innerHTML;
         document.getElementById("description2").value = document.getElementById(iDesc).innerHTML;
-        document.getElementById("image_link2").value = document.getElementById(iImg).innerHTML;
+        document.getElementById("image_link2").value = document.getElementById(iImg).src;
 
         modal2.style.display = "block";
     });

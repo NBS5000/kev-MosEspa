@@ -8,8 +8,8 @@
     -webkit-animation:fromFancy 1s 1;
     animation-fill-mode: forwards;
 
-    animation-delay:6s;
-    -webkit-animation-delay:6s; /* Safari and Chrome */
+    animation-delay:5s;
+    -webkit-animation-delay:5s; /* Safari and Chrome */
     -webkit-animation-fill-mode: forwards;
   }
   
@@ -68,9 +68,12 @@
   -webkit-animation:toPlain 1s 1;
   animation-fill-mode: forwards;
 
-  animation-delay:6s;
-  -webkit-animation-delay:6s; /* Safari and Chrome */
+  animation-delay:5s;
+  -webkit-animation-delay:5s; /* Safari and Chrome */
   -webkit-animation-fill-mode: forwards;
+}
+table{
+  border-collapse: collapse;
 }
 #plainP{
   margin-top:20px;
@@ -134,6 +137,6 @@
   color: var(--primaryColor);
   font-size: 100%;
 }
-.lastRow{
-  border-top: 10px solid var(--primaryColor);
+.lastRowP{
+  border-top: 3px solid var(--primaryColor);
 }

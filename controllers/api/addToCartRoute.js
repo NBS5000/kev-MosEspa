@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const { AddToCart, Product, User } = require("../../models");
+const { AddToCart, Product } = require("../../models");
 const Auth = require("../../utils/auth");
 
 
@@ -11,9 +11,15 @@ router.get("/", Auth, async (req, res) => {
         }
       });
       const cartItems = cartData.map((item) => item.get({ plain: true }));
-      console.log("test: 1");
+
+
+      const len = cartItems.length;
+      // console.log(len);
+      // if(!len || len == 0){
+      //   document.location.replace('/');
+      //   return;
+      // }
       const cost = function() {
-          const len = cartItems.length;
           var loop = 0;
           var c = 0;
           while (loop < len){
@@ -22,15 +28,22 @@ router.get("/", Auth, async (req, res) => {
             loop++;
             console.log(x);
           }
-          return c;
+          if(c){
+            return c;
+          }else{
+            return "Add some items!";
+          }
       }
       console.log("test: ", cost);
       res.render("cart", {
         cartItems,
-        cost
+        cost,
+        logged_in:req.session.logged_in,
+        home:true
       });
     } catch (err) {
       res.status(400).json(err);
+      // document.location.replace('/');
     }
   });
 

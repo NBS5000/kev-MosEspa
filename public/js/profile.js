@@ -51,15 +51,15 @@ const delButtonHandler = async (event) => {
 const updateFormHandler = async (event) => {
   event.preventDefault();
 
-  const name = document.querySelector(".name").value.trim();
-  const price = document.querySelector(".price").value.trim();
-  const description = document.querySelector(".description").value.trim();
-  const image_link = document.querySelector(".image_link").value.trim();
+  const name = document.querySelector("#name2").value.trim();
+  const price = document.querySelector("#price2").value.trim();
+  const description = document.querySelector("#description2").value.trim();
+  const image_link = document.querySelector("#image_link2").value.trim();
 
   if (name && price && description && image_link) {
     if (event.target.hasAttribute("data-value")) {
       const id = event.target.getAttribute("data-value");
-
+      console.log(id);
       const response = await fetch(`/api/profile/${id}`, {
         method: "PUT",
         body: JSON.stringify({ name, price, description, image_link }),
@@ -71,7 +71,7 @@ const updateFormHandler = async (event) => {
       if (response.ok) {
         document.location.replace("/profile");
       } else {
-        alert("Failed to delete product");
+        alert("Failed to update product");
       }
     }
   }

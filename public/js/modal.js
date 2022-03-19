@@ -29,23 +29,7 @@ modalBtn2s.forEach(btn => {
     });
 });
 
-const modalBtn3s = document.querySelectorAll('.itemBox');
-modalBtn3s.forEach(btn => {
-    btn.addEventListener('click', async (event) => {
-        const att = event.target.getAttribute("data-value");
-        const vImg = "img_" + att;
-        const vName = "name_" + att;
-        const vPrice = "price_" + att;
-        const vDesc = "desc_" + att;
-        
-        document.getElementById("name3").value = document.getElementById(vName).innerHTML;
-        document.getElementById("price3").value = document.getElementById(vPrice).innerHTML;
-        document.getElementById("description3").value = document.getElementById(vDesc).innerHTML;
-        document.getElementById("image3").value = document.getElementById(vImg).src;
 
-        modal2.style.display = "block";
-    });
-});
 // When the user clicks the "Cancel" button, close the modal and clear fields
 
 var canxBtn = document.getElementById("canx");

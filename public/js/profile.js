@@ -31,15 +31,17 @@ const newFormHandler = async (event) => {
 };
 
 const delButtonHandler = async (event) => {
-  if (event.target.hasAttribute("data-id")) {
-    const id = event.target.getAttribute("data-id");
+  console.log("hi")
+  if (event.target.hasAttribute("data-value")) {
+    const id = event.target.getAttribute("data-value");
+    console.log(id);
 
     const response = await fetch(`/api/profile/${id}`, {
       method: "DELETE",
     });
 
     if (response.ok) {
-      document.location.replace("api/profile");
+      document.location.replace("/profile");
     } else {
       alert("Failed to delete product");
     }
@@ -55,8 +57,8 @@ const updateFormHandler = async (event) => {
   const image_link = document.querySelector(".image_link").value.trim();
 
   if (name && price && description && image_link) {
-    if (event.target.hasAttribute("data-id")) {
-      const id = event.target.getAttribute("data-id");
+    if (event.target.hasAttribute("data-value")) {
+      const id = event.target.getAttribute("data-value");
 
       const response = await fetch(`/api/profile/${id}`, {
         method: "PUT",
@@ -81,8 +83,8 @@ const returnToHome = async (event) => {
 };
 
 document.querySelector("#confirm").addEventListener("click", newFormHandler);
-// document.querySelector(".update").addEventListener("click", updateFormHandler);
-// document.querySelector(".delete").addEventListener("click", delButtonHandler);
+document.querySelector("#confirm2").addEventListener("click", updateFormHandler);
+document.querySelector(".deleteBtn").addEventListener("click", delButtonHandler);
 // document.querySelector(".returnToHome").addEventListener("click", returnToHome);
 
 // delete button, update button, add item button, return to homepage Button,

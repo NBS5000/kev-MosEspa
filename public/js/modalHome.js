@@ -3,7 +3,6 @@ var modal3 = document.getElementById("myModal3");
 
 // The button that opens the modal
 
-
 const modalBtn3s = document.querySelectorAll('.itemViewBtn');
 modalBtn3s.forEach(btn => {
     btn.addEventListener('click', async (event) => {
@@ -26,6 +25,7 @@ modalBtn3s.forEach(btn => {
         }
     });
 
+
 });
 // When the user clicks the "Cancel" button, close the modal and clear fields
 
@@ -46,7 +46,6 @@ const addToCart = async (event) => {
   if (event.target.hasAttribute("data-value")) {
     const product_id = event.target.getAttribute("data-value");
     console.log(product_id);
-
     const response = await fetch(`/api/addToCart/${product_id}`, {
       method: "POST",
     });

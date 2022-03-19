@@ -1,28 +1,28 @@
 [
     {
       "name": "E-Web Heavy Repeating Blaster",
-      "image_link": "https://static.wikia.nocookie.net/starwars/images/6/69/EWeb-VI_Ben_Nadler.png/revision/latest?cb=20200831025043",
+      "image_link": "https://static.wikia.nocookie.net/starwars/images/6/69/EWeb-VI_Ben_Nadler.png",
       "price": 14004.99,
       "description": "The E-Web or Emplacement Weapon is heavy repeating blaster manufactured by BlasTech Industries. It was one of the most powerful repeating blasters in the Imperial arsenal",
       "user_id": 1
     },
     {
       "name": "Flechette Launcher",
-      "image_link": "https://static.wikia.nocookie.net/starwars/images/1/15/FC1-MV.png/revision/latest?cb=20150212033057",
+      "image_link": "https://static.wikia.nocookie.net/starwars/images/1/15/FC1-MV.png",
       "price": 9000.00,
       "description": "Golan Arms FC-1 flechette launcher in excellent condition. Extra flechettes included",
       "user_id": 1
     },
     {
       "name": "Fusion Cutter",
-      "image_link": "https://static.wikia.nocookie.net/starwars/images/1/1f/Fusioncutter_negwt.jpg/revision/latest?cb=20080722200432" ,
+      "image_link": "https://static.wikia.nocookie.net/starwars/images/1/1f/Fusioncutter_negwt.jpg" ,
       "price": 2200.99,
       "description": "SoroSuub F-187 fusion cutter, with an adjustable cutting beam, allowing the user fine, precise work." ,
       "user_id": 1
     },
     {
       "name": "StormTrooper Helmet", 
-      "image_link": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjRH29ixDsA2HXWqcjY0qyBxAC6hvQUctn2Q&usqp=CAU",
+      "image_link": "https://armoryshopprops.com/upload/iblock/bc7/bc77819febf5e4627240a5b804f42b28.jpg",
       "price": 1200.99,
       "description": "Torn from the head of a fallen elite Stormtrooper, this helmet is in perfect condition.",
       "user_id": 1

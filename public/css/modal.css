@@ -4,7 +4,7 @@
 .modal {
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
+    z-index: 10; /* Sit on top */
     padding-top: 100px; /* Location of the box */
     left: 0;
     top: 0;
@@ -61,6 +61,44 @@ label{
     text-align: left;
     color: black;
 }
-#container, #container2,#container3{
+
+#container, #container2, #container3{
     width: 100%;
 }
+#viewImage{
+    height:200px;
+    position: relative;
+}
+.addCanx{
+    margin-bottom: 10px !important;
+}
+#container3{
+    text-align: center;
+}
+
+#image_link3{
+    margin: 0 auto;
+    height: 100%;
+}
+#price3, #name3, #description3{
+    color: var(--primaryColor);
+    position: relative;
+}
+#name3{
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+#viewTitle{
+    font-size: 100%;
+    margin-bottom: 10px;
+}
+
+.itemViewBtn{
+    border: none; 
+    background-color:rgba(0, 0, 0, 0); 
+    margin-left: -100%;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    border-radius:50%;
+    }

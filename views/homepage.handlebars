@@ -1,10 +1,10 @@
 <div id="news" onload="news()">
     <h3 id="newsH3">Latest News</h3>
-    <h4 id="newsH4"></h4>
-    <p id="newsP"></p>
+    <h4 id="newsH4">Planet Explodes!</h4>
+    <p id="newsP">The Empire has confirmed that a plant has exploded and blamed it on a faulty gas line. If you are convinced there is more to it than that, you're looking in Alderaan places.</p>
 </div>
 
-{{!-- <div id="buySellBtn">
+<div id="buySellBtn">
     {{#if logged_in}}
     <button class="itemBtn" type="submit">List Item</button>
     {{/if}}
@@ -14,34 +14,48 @@
 
 <div id="displayList" class="scroll">
 
-    {{{itemHorz}}} --}}
-    
-{{!-- </div> --}}
+{{#each items as |item|}}
+<div class="itemBox" data-value="{{item.id}}">
+    <div class="circle">
+        <img id="imgH_{{item.id}}" class="circle itemImg" src="{{item.image_link}}" alt="{{item.name}}">
+    </div>
+    <h4 id="nameH_{{item.id}}" class="itemH4">{{item.name}}</h4>
+    <p id="descH_{{item.id}}" class="hiddenDesc">{{item.description}}</p>
+    <button class="itemViewBtn" data-value="{{item.id}}"></button>
+    <P class="itemP" id="priceH_{{item.id}}" ><span class="creditGreen itemCred"></span>{{item.price}}</P>
+</div>
+
+{{/each}}
+
 
 <!-- Item Display Modal -->
 <div id="myModal3" class="modal">
     <!-- Modal content -->
     <div class="modal-content">
-        <div id = "container3">
-            <form id = "form2">
-                <img src="{{product.image_link}}" id="image_link3"></img>
-                <h2 class="title">Update Listing</h2>
+        <div id = "container3">            
+            <form id = "form3">
+                <button id="addToCart" class="itemBtn addCanx">Add to Cart</button><button id="canx3" class="itemBtn addCanx">Cancel</button>
+                <h2 id="name3" class="title"></h2>
+                <div id="viewImage">
+                    <img src="" id="image_link3"></img>
+                </div>
                 <div class="display-item">
-                    <p id="#name3">{{product.name}}</p>
-                    <p id="price3">{{product.price}}</p>
+                    <p id="name3"></p>
+                    <p id="price3"></p>
                     <hr/>
-                    <p id="description3">{{item.description}}</p>
+                    <p id="description3"></p>
                 </div>
             </form>
         </div>
-        <br/><br/>
-        <button id="addToCart" class="itemBtn">Add to Cart</button><button id="canx2" class="itemBtn">Cancel</button>
     </div>
 </div>
 <!-- ....................... -->
 
+</div> 
+
 
 <script src="/js/news.js"></script>
+<script src="/js/modalHome.js"></script>
 <script>
     var item = document.getElementById("displayList");
     window.addEventListener("wheel", function (e) {

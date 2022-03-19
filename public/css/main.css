@@ -168,6 +168,7 @@ nav{
     margin:20px 0;
     padding: 10px;
     text-align: center;
+    background-color: rgba(0, 0, 0, 0.3);
 }
 #newsH3{
     margin-bottom:15px;
@@ -229,20 +230,23 @@ nav{
     border-radius: 50%; 
 } 
 .circle img { 
-    width: auto;
+    width: 100%;
     height: 100%; 
-    margin-left: -50px; 
+    /* margin-left: -50px;  */
 }
 .itemH4{
     position: absolute;
     bottom: 40px;
     animation: bwFont 6s;
     animation-iteration-count: 999;
-    font-size: 120%;
+    font-size: 110%;
     width: 202px;
     text-align: center;
     z-index: 5;
-
+    white-space: initial;
+}
+.hiddenDesc{
+    display: none;
 }
 .itemP{
     position: absolute;
@@ -262,7 +266,6 @@ nav{
     overflow-x: auto;
     white-space: nowrap;
 }
-
 .itemBtn{
     margin-bottom: 50px;
     transition: 0.7s;
@@ -275,9 +278,6 @@ nav{
     width: 100%;
     display: flex;
     flex-wrap: wrap;
-}
-.fullItemBox{
-    
 }
 
 /*******************************

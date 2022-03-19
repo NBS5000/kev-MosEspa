@@ -12,7 +12,6 @@ modalBtn.addEventListener("click",function(){
 });
 
 const modalBtn2s = document.querySelectorAll('.updateBtn');
-
 modalBtn2s.forEach(btn => {
     btn.addEventListener('click', async (event) => {
         const att = event.target.getAttribute("data-value");
@@ -25,10 +24,12 @@ modalBtn2s.forEach(btn => {
         document.getElementById("price2").value = document.getElementById(iPrice).innerHTML;
         document.getElementById("description2").value = document.getElementById(iDesc).innerHTML;
         document.getElementById("image_link2").value = document.getElementById(iImg).src;
-
+        document.getElementById("confirm2").setAttribute("data-value",att);
         modal2.style.display = "block";
     });
 });
+
+
 // When the user clicks the "Cancel" button, close the modal and clear fields
 
 var canxBtn = document.getElementById("canx");

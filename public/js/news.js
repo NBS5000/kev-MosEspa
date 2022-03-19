@@ -1,5 +1,6 @@
-function news(){
+setInterval( function news(){
     if(window.location.pathname == "/"){
+
     const list = [
         {
             "title": "Empire cracks down on Jedi artifacts",
@@ -47,4 +48,4 @@ function news(){
 
     }
 
-}
+}, 10000);

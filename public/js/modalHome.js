@@ -17,8 +17,13 @@ modalBtn3s.forEach(btn => {
         document.getElementById("price3").innerHTML = document.getElementById(vPrice).innerHTML;
         document.getElementById("description3").innerHTML = document.getElementById(vDesc).innerHTML;
         document.getElementById("image_link3").src = document.getElementById(vImg).src;
-
+        document.getElementById("addToCart").setAttribute("data-value",att);
         modal3.style.display = "block";
+        if(att == req.session.user_id){
+            document.getElementById("addToCart").style.display = "none"; 
+        }else{
+            document.getElementById("addToCart").style.display = "block";
+        }
     });
 });
 // When the user clicks the "Cancel" button, close the modal and clear fields

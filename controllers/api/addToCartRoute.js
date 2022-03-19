@@ -15,4 +15,20 @@ router.get("/", Auth, async (req, res) => {
     }
   });
 
+
+  router.post('/:id', async (req, res) => {
+    try {
+      const cartData = await User.create({
+        product_id: req.params.id,
+        user_id: req.session.user_id,
+      });
+      console.log(cartData);
+      // sending a response
+      res.status(200).json(userData);
+    } catch (err) {
+      res.status(400).json(err);
+    }
+  });
+
+
   module.exports = router;

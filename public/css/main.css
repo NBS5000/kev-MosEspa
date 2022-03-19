@@ -85,7 +85,7 @@ nav{
     width: 400px;
     margin-top:150px;
     animation: glowBox 8s;
-    animation-iteration-count: 99;
+    animation-iteration-count: 999;
     padding: 50px;
     border-radius: 20px;
     height: 400px;
@@ -160,7 +160,8 @@ nav{
 #news{
     width:40%;
     min-width: 150px;
-    height: 200px;
+    height: fit-content;
+    min-height: 200px;
     border: 2px solid var(--primaryColor);
     box-shadow: 1px 1px green;
     border-radius:10px;
@@ -171,7 +172,7 @@ nav{
 #newsH3{
     margin-bottom:15px;
     animation: rwbFont 6s;
-    animation-iteration-count: 99;
+    animation-iteration-count: 999;
     font-size: 120%;
 }
 #newsH4{
@@ -233,7 +234,7 @@ nav{
     position: absolute;
     bottom: 40px;
     animation: bwFont 6s;
-    animation-iteration-count: 99;
+    animation-iteration-count: 999;
     font-size: 120%;
     width: 202px;
     text-align: center;
@@ -244,7 +245,7 @@ nav{
     position: absolute;
     bottom: 10px;
     animation: bwFont 6s;
-    animation-iteration-count: 99;
+    animation-iteration-count: 999;
     width: 202px;
     text-align: center;
     z-index: 5;
@@ -399,7 +400,7 @@ nav{
 .itemH5{
     color: var(--primaryColor);
     width: 80%;
-    text-align: center;
+    text-align: left;
     margin-bottom: 15px;
     display:inline-block;
 }

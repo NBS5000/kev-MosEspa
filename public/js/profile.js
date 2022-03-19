@@ -6,10 +6,12 @@ const newFormHandler = async (event) => {
   const price = document.querySelector("#price").value.trim();
   const description = document.querySelector("#description").value.trim();
   const image_link = document.querySelector("#image_link").value.trim();
+
   // const regex = /\.(jpg|jpeg|png|webp|avif|gif|svg)$/;
   // const image_link=regex.exec(link)
   console.log(name)
   console.log(image_link)
+
 
   if (name && price && description && image_link) {
     const response = await fetch(`/api/profile`, {

@@ -1,14 +1,7 @@
 
 @keyframes glowBox{
-    /* 0% {box-shadow: 0px 0px 5px darkred;}
-    15% {box-shadow: 0px 0px 10px purple;}
-    40% {box-shadow: 0px 0px 15px darkblue;}
-    70% {box-shadow: 0px 0px 10px purple;}
-    90% {box-shadow: 0px 0px 5px darkred;} */
     0% {border: 1px solid darkred;}
-    /* 25% {border: 1px solid purple;} */
     60% {border: 1px solid darkblue;}
-    /* 90% {border: 1px solid purple;} */
     100% {border: 1px solid darkred;}
 }
 
@@ -25,18 +18,3 @@
     100% {color:red;}
 }
 
-@keyframes itemMove{
-    0% {right:-20%;}
-    8% {right:0;}
-    16% {right:10%;}
-    24% {right:20%;}
-    32% {right:30%;}
-    40% {right:40%;}
-    48% {right:50%;}
-    56% {right:60%;}
-    64% {right:70%;}
-    72% {right:80%;}
-    80% {right:90%;}
-    88% {right:100%;}
-    100% {right:120%;}
-}

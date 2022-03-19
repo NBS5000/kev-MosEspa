@@ -12,7 +12,6 @@ modalBtn.addEventListener("click",function(){
 });
 
 const modalBtn2s = document.querySelectorAll('.updateBtn');
-
 modalBtn2s.forEach(btn => {
     btn.addEventListener('click', async (event) => {
         const att = event.target.getAttribute("data-value");
@@ -25,6 +24,24 @@ modalBtn2s.forEach(btn => {
         document.getElementById("price2").value = document.getElementById(iPrice).innerHTML;
         document.getElementById("description2").value = document.getElementById(iDesc).innerHTML;
         document.getElementById("image_link2").value = document.getElementById(iImg).src;
+
+        modal2.style.display = "block";
+    });
+});
+
+const modalBtn3s = document.querySelectorAll('.itemBox');
+modalBtn3s.forEach(btn => {
+    btn.addEventListener('click', async (event) => {
+        const att = event.target.getAttribute("data-value");
+        const vImg = "img_" + att;
+        const vName = "name_" + att;
+        const vPrice = "price_" + att;
+        const vDesc = "desc_" + att;
+        
+        document.getElementById("name3").value = document.getElementById(vName).innerHTML;
+        document.getElementById("price3").value = document.getElementById(vPrice).innerHTML;
+        document.getElementById("description3").value = document.getElementById(vDesc).innerHTML;
+        document.getElementById("image3").value = document.getElementById(vImg).src;
 
         modal2.style.display = "block";
     });

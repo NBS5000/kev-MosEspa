@@ -83,6 +83,7 @@ label{
 #price3, #name3, #description3{
     color: var(--primaryColor);
     position: relative;
+    white-space: initial;
 }
 #name3{
     font-weight: bold;

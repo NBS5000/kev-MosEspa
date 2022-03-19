@@ -1,5 +1,5 @@
 function news(){
-
+    if(window.location.pathname == "/"){
     const list = [
         {
             "title": "Empire cracks down on Jedi artifacts",
@@ -45,6 +45,6 @@ function news(){
     title.innerHTML = story.title;
     text.innerHTML = story.story;
 
-
+    }
 
 }

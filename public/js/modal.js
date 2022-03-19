@@ -1,3 +1,5 @@
+const {Product} = require("../../models");
+
 // Get the modal
 var modal = document.getElementById("myModal");
 var modal2 = document.getElementById("myModal2");
@@ -9,12 +11,20 @@ var canx2 = document.getElementById("canx2");
 
 
 // The button that opens the modal
-var modalBtn = document.getElementById("profileList");
+var modalBtn = document.querySelector("#profileList");
 modalBtn.addEventListener("click",function(){
     modal.style.display = "block";
 });
-var modalBtn2 = document.querySelector("updateBtn");
-modalBtn2.addEventListener("click",function(){
+var modalBtn2 = document.querySelector(".updateBtn");
+modalBtn2.addEventListener("click",async (event) =>{
+    const att = event.target.getAttribute("data-value");
+
+    const productData = await Product.findByPk(att);
+    document.getElementById("name").value = productData.name;
+    document.getElementById("price").value = productData.price;
+    document.getElementById("description").value = productData.description;
+    document.getElementById("image_link").value = productData.image_link;
+
     modal2.style.display = "block";
 });
 

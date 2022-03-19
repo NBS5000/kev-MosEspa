@@ -7,6 +7,12 @@ const newFormHandler = async (event) => {
   const description = document.querySelector("#description").value.trim();
   const image_link = document.querySelector("#image_link").value.trim();
 
+  // const regex = /\.(jpg|jpeg|png|webp|avif|gif|svg)$/;
+  // const image_link=regex.exec(link)
+  console.log(name)
+  console.log(image_link)
+
+
   if (name && price && description && image_link) {
     const response = await fetch(`/api/profile`, {
       method: "POST",
@@ -49,10 +55,10 @@ const updateFormHandler = async (event) => {
   const image_link = document.querySelector(".image_link").value.trim();
 
   if (name && price && description && image_link) {
-    // if (event.target.hasAttribute("data-id")) {
-    //   const id = event.target.getAttribute("data-id");
+    if (event.target.hasAttribute("data-id")) {
+      const id = event.target.getAttribute("data-id");
 
-      const response = await fetch(`/api/profile/`, {
+      const response = await fetch(`/api/profile/${id}`, {
         method: "PUT",
         body: JSON.stringify({ name, price, description, image_link }),
         headers: {
@@ -66,7 +72,7 @@ const updateFormHandler = async (event) => {
         alert("Failed to delete product");
       }
     }
-  
+  }
 };
 
 const returnToHome = async (event) => {

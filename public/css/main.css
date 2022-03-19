@@ -477,3 +477,9 @@ nav{
 	padding-right: 8px;
 	
 }
+
+#userProdList{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}

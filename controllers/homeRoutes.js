@@ -43,20 +43,14 @@ router.get("/profile", async (req, res) => {
       userEmail:req.session.userEmail,
       home:true
     })
-    
-    
-    
-    //, {
-      // product,
-    // });
+
   } catch (err) {
     console.log(err);
     res.status(400).json(err);
   }
 });
 
-
-// finding a product by its name 
+// finding a product by its id
 
 router.get("/product/:id", async (req, res) => {
   try {
@@ -68,7 +62,6 @@ router.get("/product/:id", async (req, res) => {
         },
       ],
     });
-
     const product = productData.get({ plain: true });
     res.render("product", { product });
   } catch (err) {
@@ -83,7 +76,6 @@ router.get("/login", (req, res) => {
     res.redirect("/");
     return;
   }
-
   res.render("login");
 });
 

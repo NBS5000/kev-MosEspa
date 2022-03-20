@@ -8,11 +8,11 @@ setInterval( function news(){
         },
         {
             "title": "R9 Astromechs to have voices?",
-            "story": "Insiders suggest the latest R9 astromechs may have voices instead of communicating in binary. This has led to mixed opinions, with some saying they don't want o hear the droid's sass."
+            "story": "Insiders suggest the latest R9 astromechs may have voices instead of communicating in binary. This has led to mixed opinions, with some saying they don't want to hear the droid's sass."
         },
         {
             "title": "TIE fighters to remain without shields",
-            "story": "The Empire have confirmed that TIE fighters will continue to fly without shields. An unnamed Moff stated 'The troopers lives worth the handful of credits it would cost to put shields in these things'."
+            "story": "The Empire have confirmed that TIE fighters will continue to fly without shields. An unnamed Moff stated 'The troopers lives aren't worth the handful of credits it would cost to put shields in these things'."
         },
         {
             "title": "Stormtrooper standoff",

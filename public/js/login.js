@@ -51,3 +51,23 @@ document
 document
   .querySelector('.signUpForm')
   .addEventListener('submit', signupFormHandler);
+
+
+function logSign(){
+  const sign = document.querySelector(".signupBox");
+  const log = document.querySelector(".loginBox");
+  const signBtn = document.querySelector("#sign");
+  const logBtn = document.querySelector("#log");
+  if(sign.style.display == 'none'){
+    sign.style.display = "block";
+    logBtn.style.display = "block";
+    log.style.display = "none";
+    signBtn.style.display = "none";
+  }else{
+    sign.style.display = "none";
+    logBtn.style.display = "none";
+    log.style.display = "block";
+    signBtn.style.display = "block";
+  }
+
+}

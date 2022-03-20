@@ -1,8 +1,8 @@
 
 @keyframes glowBox{
-    0% {border: 1px solid darkred;}
-    60% {border: 1px solid darkblue;}
-    100% {border: 1px solid darkred;}
+    0% {border: 2px solid darkred;}
+    60% {border: 2px solid darkblue;}
+    100% {border: 2px solid darkred;}
 }
 
 @keyframes bwFont{

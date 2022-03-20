@@ -8,12 +8,7 @@ router.post('/', async (req, res) => {
     // creates a new user in the database using the req.body field
 
     const userData = await User.create(req.body);
-    // const userData = await User.create({
-    //   username: req.body.username,
-    //   email: req.body.email,
-    //   password: req.body.password,
-    // })
-    console.log(userData)
+
     // uses the same id as the user for the session id
     req.session.user_id = userData.id;
     //simple login boolean

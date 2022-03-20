@@ -29,9 +29,7 @@ const signupFormHandler = async (event) => {
   const name = document.querySelector('#name-signup').value.trim();
   const email = document.querySelector('#email-signup').value.trim();
   const password = document.querySelector('#password-signup').value.trim();
-  // console.log(email);
-  // console.log(name);
-  // console.log(password);
+
   if (name && email && password) {
     const response = await fetch('/api/users', {
       method: 'POST',
@@ -53,3 +51,23 @@ document
 document
   .querySelector('.signUpForm')
   .addEventListener('submit', signupFormHandler);
+
+
+function logSign(){
+  const sign = document.querySelector(".signupBox");
+  const log = document.querySelector(".loginBox");
+  const signBtn = document.querySelector("#sign");
+  const logBtn = document.querySelector("#log");
+  if(sign.style.display == 'none'){
+    sign.style.display = "block";
+    logBtn.style.display = "block";
+    log.style.display = "none";
+    signBtn.style.display = "none";
+  }else{
+    sign.style.display = "none";
+    logBtn.style.display = "none";
+    log.style.display = "block";
+    signBtn.style.display = "block";
+  }
+
+}

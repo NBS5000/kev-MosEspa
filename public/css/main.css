@@ -9,6 +9,7 @@ body{
     background-color: lightgray;
     font-family: arial, helvetica, sans-serif;
     color: var(--secondColor);
+    padding-bottom: 100px;
     
 }
 #mainContent{
@@ -43,7 +44,7 @@ footer{
     position: fixed;
 }
 h1{
-    width: 80%;
+    width: 60%;
     height: 100%;
     line-height: 100%;
     font-size: 200%;
@@ -57,7 +58,8 @@ a{
 ********  nav ****************
 ******************************/
 nav{
-    width: fit-content;
+    width: 35%;
+    text-align: right;
 }
 .navA{
     color: var(--secondColor);
@@ -83,13 +85,22 @@ nav{
 }
 .loginBox, .signupBox{
     width: 400px;
-    margin-top:150px;
-    animation: glowBox 8s;
+    margin-top:100px;
+    animation: glowBox 4s;
     animation-iteration-count: 999;
     padding: 50px;
     border-radius: 20px;
     height: 400px;
 
+}
+#log{
+    display: none;
+}
+
+
+.signupBox{
+    height: 470px;
+    display: none;
 }
 .pw{
     padding: 0 10px 3px 10px;
@@ -126,8 +137,16 @@ nav{
 .logLabel{
     color: black;
 }
+.logSignSwitch{
+    width: 300px;
+    margin: 0 auto;
+    margin-top: 30px;
+}
 /************************************/
-
+#homeList{
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
 
 #buySellBtn{
     display: flex;
@@ -292,6 +311,14 @@ nav{
     border-radius:50%;
 }
 
+#sellerP{
+    font-weight: bold;
+    line-height: 150%;
+}
+#sellerP span{
+    font-weight: normal;
+}
+
 /*******************************
 ******* scroll bar ************* 
 *******************************/
@@ -317,8 +344,6 @@ nav{
 #profileDetails{
     margin: 0 auto;
     margin-top: 5%;
-    /* animation: glowBox 8s;
-    animation-iteration-count: 99;*/
     height: 200px;
     width: 80%;
 }

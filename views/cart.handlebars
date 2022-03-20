@@ -1,16 +1,63 @@
-<div class="fade"></div>
 
-<section class="star-wars">
-  <div class="crawl">
-    <div class="title">
-      <p>Episode IV</p>
-      <h1>A New Hope</h1>
-    </div>
-    
-    <p>It is a period of civil war. Rebel spaceships, striking from a hidden base, have won their first victory against the evil Galactic Empire.</p>
-      
-      <p>During the battle, Rebel spies managed to steal secret plans to the Empire’s ultimate weapon, the DEATH STAR, an armored space station with enough power to destroy an entire planet.</p>
+<div id="fancyCart">
+  <section class="star-wars">
+    <div class="crawl">
+      <div class="title">
+        <p>MOS ESPA MARKETPLACE</p>
+        <h1>YOUR CART</h1>
+      </div>
+      <table>
+        <tr>
+          <th>Item</th>
+          <th>Price</th>
+        </tr>
 
-    <p>Pursued by the Empire’s sinister agents, Princess Leia races home aboard her starship, custodian of the stolen plans that can save her people and restore freedom to the galaxy….</p>
-  </div>
-</section>
+{{#each cartItems as |item|}}
+
+        <tr>
+          <td class="cartTdName">{{item.product_name}}</td>
+          <td class="cartTdPrice">{{item.product_price}}</td>
+        </tr>
+
+
+{{/each}}
+
+        <tr class="lastRow">
+          <td class="cartTdName cartTotal">Total</td>
+          <td class="cartTdPrice">{{cost}}</td>
+        </tr>
+      </table>
+
+        
+      </div>
+  </section>
+</div>
+
+<div id="plainCart">
+      <div class="plainTitle">
+        <p id="plainP">MOS ESPA MARKETPLACE</p>
+        <h1 id="plainH1">YOUR CART</h1>
+      </div>
+
+<table id="plainT">
+        <tr>
+          <th class="plainTh">Item</th>
+          <th class="plainTh">Price</th>
+        </tr>
+
+{{#each cartItems as |item|}}
+
+        <tr>
+          <td class="plainTd">{{item.product_name}}</td>
+          <td class="plainTh plainNum"><span class="creditGreen"></span>{{item.product_price}}</td>
+        </tr>
+
+
+{{/each}}
+
+        <tr class="lastRowP">
+          <td class="cartTotalP">Total</td>
+          <td class="cartTdPrice plainNum"><span class="creditGreen"></span>{{cost}}</td>
+        </tr>
+      </table>
+</div>

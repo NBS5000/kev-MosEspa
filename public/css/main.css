@@ -265,6 +265,7 @@ nav{
     flex-wrap: nowrap;
     overflow-x: auto;
     white-space: nowrap;
+    height: 210px;
 }
 .itemBtn{
     margin-bottom: 50px;
@@ -280,6 +281,17 @@ nav{
     flex-wrap: wrap;
 }
 
+
+.itemViewBtn{
+    border: none; 
+    background-color:rgba(0, 0, 0, 0); 
+    margin-left: -100%;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    border-radius:50%;
+}
+
 /*******************************
 ******* scroll bar ************* 
 *******************************/
@@ -293,6 +305,9 @@ nav{
     border-radius: 10px;  
     border: 1px solid darkgray; 
     height: 5px;
+}
+.scroll::-webkit-scrollbar-corner {
+    background-color: rgba(0, 0, 0, 0);
 }
 
 /******************************

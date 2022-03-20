@@ -11,6 +11,7 @@ router.get("/", async (req, res) => {
       include: [
         {
           model: User,
+          attributes: ["name"],
         },
       ],
     });
@@ -18,7 +19,6 @@ router.get("/", async (req, res) => {
 
 
     res.render("homepage",{
-      logged_in:req.session.logged_in,
       home:false, 
       items
     })

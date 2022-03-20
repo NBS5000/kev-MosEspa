@@ -81,4 +81,34 @@ const addToCart = async (event) => {
     }
 };
 
+
+
+const newFormHandlerH = async (event) => {
+    event.preventDefault();
+
+    const name = document.querySelector("#name4").value.trim();
+    const price = document.querySelector("#price4").value.trim();
+    const description = document.querySelector("#description4").value.trim();
+    const image_link = convert(document.querySelector("#image_link4").value.trim());
+
+
+    if (name && price && description && image_link) {
+        const response = await fetch(`/api/profile`, {
+        method: "POST",
+        body: JSON.stringify({ name, price, description, image_link }),
+        headers: {
+            "Content-Type": "application/json",
+        },
+        });
+
+        if (response.ok) {
+        document.location.replace("/");
+        } else {
+        alert("Failed to create product");
+        }
+    }
+};
+
+
 document.querySelector("#addToCart").addEventListener("click", addToCart);
+document.querySelector("#confirm4").addEventListener("click", newFormHandlerH);

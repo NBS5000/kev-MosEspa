@@ -83,7 +83,7 @@ const returnToHome = async (event) => {
 
 document.querySelector("#confirm").addEventListener("click", newFormHandler);
 document.querySelector("#confirm2").addEventListener("click", updateFormHandler);
-document.querySelector(".deleteBtn").addEventListener("click", delButtonHandler);
+// document.querySelector(".deleteBtn").addEventListener("click", delButtonHandler);
 // document.querySelector(".returnToHome").addEventListener("click", returnToHome);
 
 // delete button, update button, add item button, return to homepage Button,

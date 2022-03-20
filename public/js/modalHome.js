@@ -1,5 +1,6 @@
 // Get the modal
 var modal3 = document.getElementById("myModal3");
+var modal4 = document.getElementById("myModal4");
 
 // The button that opens the modal
 
@@ -21,26 +22,33 @@ modalBtn3s.forEach(btn => {
         document.getElementById("itemSeller").textContent = document.getElementById(vSeller).getAttribute("data_value");
         document.getElementById("sellerP").setAttribute("data_value",document.getElementById(vSeller).getAttribute("data_id"));
         
-        // console.log(logged_in, uSessId);
-        // const uSessId = req.session.user_id;
-        // const log = req.session.logged_in;
         modal3.style.display = "block";
-        // if(logged_in && att == uSessId){
-        //     document.getElementById("addToCart").style.display = "none"; 
-        // }else{
-        //     document.getElementById("addToCart").style.display = "block";
-        // }
     });
-
-
 });
+
+
+var modalBtn4 = document.querySelector("#homeList");
+modalBtn4.addEventListener("click",function(){
+    modal4.style.display = "block";
+});
+
+
+
+
 // When the user clicks the "Cancel" button, close the modal and clear fields
 
 var canxBtn3 = document.getElementById("canx3");
 canxBtn3.addEventListener("click", function () {
     modal3.style.display = "none";
 });
-
+var canxBtn4 = document.getElementById("canx4");
+canxBtn4.addEventListener("click", function () {
+    document.getElementById("name4").value = "";
+    document.getElementById("price4").value = "";
+    document.getElementById("description4").value = "";
+    document.getElementById("image_link4").value = "";
+    modal4.style.display = "none";
+});
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function (event) {
     if (event.target == modal3) {
@@ -48,21 +56,29 @@ window.onclick = function (event) {
     }
 };
 
-const addToCart = async (event) => {
-    console.log("hi");
-    // if (event.target.hasAttribute("data-value")) {
-        const product_id = event.target.getAttribute("data_value");
-        console.log(product_id);
-        const response = await fetch(`/api/addToCart/${product_id}`, {
-            method: "POST",
-        });
+window.onclick = function(event) {
+    if (event.target == modal4) {    
+        document.getElementById("name4").value = "";
+        document.getElementById("price4").value = "";
+        document.getElementById("description4").value = "";
+        document.getElementById("image_link4").value = "";
+        modal4.style.display = "none";
+    }
+}
 
-        if (response.ok) {
-        document.location.replace("/");
-        } else {
-        alert("Failed to add product to cart");
-        }
-    // }
+const addToCart = async (event) => {
+    
+    const product_id = event.target.getAttribute("data_value");
+    console.log(product_id);
+    const response = await fetch(`/api/addToCart/${product_id}`, {
+        method: "POST",
+    });
+
+    if (response.ok) {
+    document.location.replace("/");
+    } else {
+    alert("Failed to add product to cart");
+    }
 };
 
 document.querySelector("#addToCart").addEventListener("click", addToCart);

@@ -12,7 +12,7 @@
 {{#each product}}
 		<div class="outer">
 			<div class="itemContent">
-                <img class="itemListImg" id="img_{{this.id}}" src="{{this.image_link}}" alt="{{this.description}}">
+                <img class="itemListImg" id="img_{{this.id}}" src="{{this.image_link}}" alt="{{this.name}}">
 				<h1 class="itemH1" id="name_{{this.id}}" >{{this.name}}</h1>
                 
 				<p class="itemBoxP" id="desc_{{this.id}}">{{this.description}}</p>
@@ -80,3 +80,4 @@
 
 <script src="/js/modal.js"></script>
 <script src ="/js/profile.js"></script>
+<script src="/js/imgExt.js"></script>

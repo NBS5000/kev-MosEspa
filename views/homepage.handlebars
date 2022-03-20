@@ -8,7 +8,7 @@
     {{#if logged_in}}
     <button class="itemBtn" type="submit" id="homeList">List Item</button>
     {{/if}}
-    <button class="itemBtn" type="submit">View Items</button>
+    <!--button class="itemBtn" type="submit">View Items</button-->
 </div>
 
 
@@ -21,7 +21,7 @@
     </div>
     <h4 id="nameH_{{item.id}}" class="itemH4">{{item.name}}</h4>
     <p id="descH_{{item.id}}" class="hiddenDesc">{{item.description}}</p>
-    <p id="seller_{{item.id}}"  class="itemH4 hiddenDesc" data_id="{{item.user_id}}" data_value="{{user.name}}" ></p>
+    <p id="seller_{{item.id}}"  class="itemH4 hiddenDesc" data_id="{{item.user_id}}" data_value="{{user.name}}" data_email="{{user.email}}"></p>
     <button class="itemViewBtn" data-value="{{item.id}}"></button>
     <P class="itemP" id="priceH_{{item.id}}" ><span class="creditGreen itemCred"></span>{{item.price}}</P>
 </div>
@@ -44,9 +44,12 @@
                     <p id="name3"></p>
                     <p id="price3"></p>
                     <hr/>
-                    <p id="sellerP" data_value="">Seller: <span id="itemSeller"></span></p>
-                    <hr/>
                     <p id="description3"></p>
+                    <hr/>
+                    <p id="sellerP" data_value="">Seller: <br/>
+                    <span id="itemSeller"></span><br/>
+                    <span id="itemSellerEmail"></span></p>
+
                 </div>
             </form>
         </div>

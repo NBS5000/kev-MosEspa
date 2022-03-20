@@ -143,7 +143,10 @@ nav{
     margin-top: 30px;
 }
 /************************************/
-
+#homeList{
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
 
 #buySellBtn{
     display: flex;
@@ -306,6 +309,14 @@ nav{
     height: 100%;
     width: 100%;
     border-radius:50%;
+}
+
+#sellerP{
+    font-weight: bold;
+    line-height: 150%;
+}
+#sellerP span{
+    font-weight: normal;
 }
 
 /*******************************

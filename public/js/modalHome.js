@@ -21,6 +21,7 @@ modalBtn3s.forEach(btn => {
 
         document.getElementById("itemSeller").textContent = document.getElementById(vSeller).getAttribute("data_value");
         document.getElementById("sellerP").setAttribute("data_value",document.getElementById(vSeller).getAttribute("data_id"));
+        document.getElementById("itemSellerEmail").textContent = document.getElementById(vSeller).getAttribute("data_email");
         
         modal3.style.display = "block";
     });
@@ -55,16 +56,16 @@ window.onclick = function (event) {
         modal3.style.display = "none";
     }
 };
-
-window.onclick = function(event) {
-    if (event.target == modal4) {    
+window.onclick = function (event) {
+    if (event.target == modal4) {
         document.getElementById("name4").value = "";
         document.getElementById("price4").value = "";
         document.getElementById("description4").value = "";
         document.getElementById("image_link4").value = "";
         modal4.style.display = "none";
     }
-}
+};
+
 
 const addToCart = async (event) => {
     

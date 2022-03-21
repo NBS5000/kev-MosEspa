@@ -36,14 +36,22 @@ Writing of a solution to resolve the situation, including:
   * *Video background*
 * Javascript
   * *Error free performance*
+  * *Express Nodes to Handle backend server requests*
+  * *Front end response fetched from backend server*
+  * *Stores user session information for better user experience*
   * *Multiple functions to separate aspects of code*
   * *Thorough comments*
+  * *Express routes to handle client requests*
 * Public
-  * *Code added to GIT public repository and Heroku for public viewing*
+  * *Code added to GIT public repository and Heroku for public access*
   * *Numerous commits to track changes in code*
+  * *Unique filenames for better integration*
 * Functionality
   * *Simple and intuitive processes*
   * *Colour variation over images to account for different background colours*
+  * *Custom animations for loading Cart items for a more aesthetic view*
+  * *Free user range to post, update and delete items for sale*
+  * *Follows the MVC model for a cohesive coding practice*
 
 **RESULT**
 
@@ -79,7 +87,7 @@ The link to the live site is [HERE](https://..........)
 
 Alternatively, here is a GIF of the application running:
 
-> ![GIF of application running](./assets/images/screen.png "GIF of application running")
+> ![GIF of application running](./assets/demo.gif "GIF of application running")
 
 ---
 <p style="text-align:center;">Written by <span style="font-style:italic">Steve Barry - Kevin Peng - Nafisa Ali - Syed Hasnat</span> - Due date 21/03/2022</p>

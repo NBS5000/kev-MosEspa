@@ -83,7 +83,7 @@ The end code is stored on Github and hosted on Heroku, and publicly available an
 
 You can view the Github repo here [HERE](https://github.com/cn-kp/Ecommerce-fullstack)
 
-The link to the live site is [HERE](https://..........)
+The link to the live site is [HERE](https://mosespamarketplace.herokuapp.com/)
 
 Alternatively, here is a GIF of the application running:
 
